@@ -3,3 +3,20 @@ body {
     font-size: 16px;
     line-height: 1;
   }
+
+  header {
+    background-color: rgb(69, 144, 250);
+    padding: 20px 35px;
+    border: solid gray 1px;
+    border-radius: 30px;
+  }
+
+  nav {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    background-color: rgb(250, 115, 65);
+    padding: 10px;
+    display: inline-block;
+  }
