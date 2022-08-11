@@ -5,18 +5,114 @@ body {
   }
 
   header {
+    color: rgb(45, 44, 44);
+    text-shadow: 1px 1px 2px rgb(26, 60, 105);
     background-color: rgb(69, 144, 250);
     padding: 20px 35px;
-    border: solid gray 1px;
+    border: solid rgb(45, 44, 44) 1px;
     border-radius: 30px;
   }
 
-  nav {
+  .custom-restricted-width {
+    display: inline-block;
+  }
+
+  #layout {
     font-size: 16px;
     font-weight: bold;
     color: black;
     text-decoration: none;
+    text-shadow: 1px 1px 2px rgb(69, 31, 17);
     background-color: rgb(250, 115, 65);
     padding: 10px;
-    display: inline-block;
   }
+
+  .pure-menu-item {
+    color: black;
+    display: flex-wrap;
+    margin: 5px; 
+  }
+
+/* Add transition to containers so they can push in and out. */
+#layout, #menu, .menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#layout {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+}
+    #layout.active #menu {
+        left: 150px;
+        width: 150px;
+    }
+
+    #layout.active .menu-link {
+        left: 150px;
+    }
+
+    #menu {
+    margin-left: -150px; /* "#menu" width */
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    background: #191818;
+    overflow-y: auto;
+}
+/* All anchors inside the menu should be styled like this. */
+    #menu a {
+        color: #999;
+        border: none;
+        padding: 0.6em 0 0.6em 0.6em;
+    }
+
+    /* Remove all background/borders, since we are applying them to #menu. */
+     #menu .pure-menu,
+     #menu .pure-menu ul {
+        border: none;
+        background: transparent;
+    }
+
+    /* Add that light border to separate items into groups. */
+    #menu .pure-menu ul,
+    #menu .pure-menu .menu-item-divided {
+        border-top: 1px solid #333;
+    }
+        /*
+        Change color of the anchor links on hover/focus.
+        */
+        #menu .pure-menu li a:hover,
+        #menu .pure-menu li a:focus {
+            background: #333;
+        }
+
+    /*
+    This styles the selected menu item `<li>`.
+    */
+    #menu .pure-menu-selected,
+    #menu .pure-menu-heading {
+        background: #1f8dd6;
+    }
+        /*
+        This styles a link within a selected menu item `<li>`.
+        */
+        #menu .pure-menu-selected a {
+            color: #fff;
+        }
+
+    /*
+    This styles the menu heading.
+    */
+    #menu .pure-menu-heading {
+        font-size: 110%;
+        color: #fff;
+        margin: 0;
+    }
