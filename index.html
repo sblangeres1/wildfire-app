@@ -13,42 +13,39 @@
 
 <body>
     <!-- NAV/MENU-->
-    <div id="layout">
-        <!-- Menu toggle-->
-        <a href="#menu" id="menuLink" class="menu-link">
-            <!--Hamburger icon-->
-            <span></span>
-        </a>
-
-        <div id="menu">
-            <div class="pure-menu custom-restricted-width">
-                <a class="pure-menu-heading" href="#name">Name</a>
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item">
-                        <a href="#sec-1" class="pure-menu-link">Is there a fire?</a>
-                    </li>
-                    <li class="pure-menu-item">
-                        <a href="#sec-2" class="pure-menu-link">Fire weather</a>
-                    </li>
-                    <li class="pure-menu-item">
-                        <a href="#sec-3" class="pure-menu-link">Are you ready?</a>
-                    </li>
-                    <li class="pure-menu-item">
-                        <a href="#sec-4" class="pure-menu-link">Is your home ready?</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- MAIN CONTENT-->
-    <div id="main">
-        <header class="header">
+    <div id="layout" class="pure-g">
+        <header class="header pure-u-1">
             <h1>California Wildfire Response Mobile App</h1>
             <h2>Subtitle...</h2>
         </header>
+        <div class="pure-menu custom-restricted-width pure-g" id="menu">
+            <a class="pure-menu-heading pure-u-1" 
+            href="#weather-data">Weather Data from API?</a>
+            <ul class="pure-menu-list pure-g">
+                <li class="pure-menu-item pure-u-1">
+                    <a href="#sec-1" class="pure-menu-link">Is there a fire?</a>
+                </li>
+                <li class="pure-menu-item pure-u-1">
+                    <a href="#sec-2" class="pure-menu-link">Fire weather</a>
+                </li>
+                <li class="pure-menu-item pure-u-1">
+                    <a href="#sec-3" class="pure-menu-link">Are you ready?</a>
+                </li>
+                <li class="pure-menu-item pure-u-1">
+                    <a href="#sec-4" class="pure-menu-link">Is your home ready?</a>
+                </li>
+                <li class="pure-menu-item pure-u-1">
+                    <a href="#sec-5" class="pure-menu-link">Your Fire Safe Council</a>
+                </li>
+                <li class="pure-menu-item pure-u-1">
+                    <a href="#sec-6" class="pure-menu-link">Useful Links</a>
+                </li>
+            </ul>
+        </div>
 
-        <div class="content">
-            <div class="pure-g">
+    <!-- MAIN CONTENT-->
+        <div class="content" id="main">
+            <section class="pure-g">
                 <!-- SEC 1-2: INCIDENT MAP-->
                 <div class="inc-map pure-u-1-2" id="sec-1">
                     <h2 class="content-subhead">Is there a fire near you?</h2>
@@ -56,31 +53,43 @@
                 <div class="weather pure-u-1-2" id="sec-2">
                     <h2 class="content-subhead">What's the fire weather near you?</h2>
                 </div>
-            </div>
+            </section>
             <!-- SEC 3: ARE YOU READY LIST-->
-            <div class="wrap-collabsible"> <input id="collapsible" class="toggle" type="checkbox"> <label
-                    for="collapsible" class="lbl-toggle">Are you ready for a wildfire emergency?</label>
-                <div class="collapsible-content">
+            <section class="pure-g wrap-section3" id="sec3-4-grid"> 
+                <input id="section3" class="pure-u-1-2 toggle" type="checkbox"> 
+                <label for="section3" class="lbl-toggle">Are you ready?</label>
+                    <div class="pure-u-1-2 sect-content">
+                        <div class="content-inner">
+                            <p> 
+                                Put list here
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div input id="collapsible" class=" pure-u-1-2 wrap-collapsible toggle" type="checkbox"> <label
+                    for="collapsible" class="lbl-toggle">Is your home ready?</label>
+                <div class="pure-u-1-2 collapsible-content">
                     <div class="content-inner">
                         <p> 
                             Put list here
                         </p>
                     </div>
                 </div>
-            </div>
+            </div>                                
+            </section>
             <!-- SEC 4: HOME READY LIST-->
-            <div class="home-ready" id="sec-4">
+            <section class="home-ready" id="sec-4">
                 <h2 class="content-subhead">Is your home ready for wildfire?</h2>
-            </div>
+            </section>
             <!-- SEC 5-6: LINKS, FIRE SAFE COUNCIL-->
-            <div class="pure-g">
+            <section class="pure-g">
                 <div class="fire-safe pure-u-1-2" id="sec-5">
                     <h2 class="content-subhead">Find your Fire Safe Council</h2>
                 </div>
                 <div class="links pure-u-1-2" id="sec-6">
                     <h2 class="content-subhead">Helpful Links</h2>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 

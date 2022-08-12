@@ -2,6 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1;
+    background: rgba(128, 128, 128, 0.537);
 }
 
 header {
@@ -17,14 +18,14 @@ header {
     display: inline-block;
 }
 
-#layout {
-    font-size: 16px;
-    font-weight: bold;
+.pure-menu-heading {
     color: black;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgb(69, 31, 17);
-    background-color: rgb(250, 115, 65);
-    padding: 10px;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    background: gray;
+    border: solid black 1px;
 }
 
 #menu {
@@ -39,14 +40,26 @@ header {
     font-size: 16px;
     font-weight: bold;
     color: black;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgb(69, 31, 17);
     overflow-y: auto;
+}
+
+#pure-menu-list {
+    color: black;
+    display: flex; 
+    text-shadow: 1px 1px 2px rgb(69, 31, 17);
+}
+
+.pure-menu-link {
+    overflow-y: auto;
+    margin: 0 auto;
+    color: black;
+    text-decoration: none;
 }
 
 .pure-menu-item {
     color: black;
-    display: flex-wrap;
+    display: flex;
+    flex-wrap: wrap; 
     margin: 5px;
 }
 
@@ -76,14 +89,6 @@ header {
     left: 150px;
 }
 
-
-/* All anchors inside the menu should be styled like this. */
-#menu a {
-    color: #999;
-    border: none;
-    padding: 0.6em 0 0.6em 0.6em;
-}
-
 /* Remove all background/borders, since we are applying them to #menu. */
 #menu .pure-menu,
 #menu .pure-menu ul {
@@ -103,30 +108,19 @@ header {
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
     background: #333;
+    color: whitesmoke;
 }
 
 /*
     This styles the selected menu item `<li>`.
     */
-#menu .pure-menu-selected,
-#menu .pure-menu-heading {
-    background: #1f8dd6;
-}
+#menu .pure-menu-selected {
 
-/*
-        This styles a link within a selected menu item `<li>`.
-        */
+}
+/* Styles a link within a selected menu item `<li>`. */
 #menu .pure-menu-selected a {
-    color: #fff;
-}
-
-/*
-    This styles the menu heading.
-    */
-#menu .pure-menu-heading {
-    font-size: 110%;
-    color: #fff;
-    margin: 0;
+    color: whitesmoke;
+    background: #333;
 }
 
 /* CONTENT STYLES*/
@@ -138,6 +132,10 @@ header {
     line-height: 1.6em;
 }
 
+#sec3-4-grid {
+    display: flex;
+    justify-content: space-around;
+}
 
 /*
 `.menu-link` represents the responsive menu toggle that shows/hides on
