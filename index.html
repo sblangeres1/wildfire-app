@@ -10,12 +10,20 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body></body>
     <!-- NAV/MENU-->
     <div id="layout">
-        <div class="pure-menu custom-restricted-width" id="menu">
-            <ul class="pure-menu-list">
-                <li class=pure-menu-item>
+        <!-- Menu toggle-->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!--Hamburger icon-->
+            <span></span>
+        </a>
+
+        <div id="menu">
+            <div class="pure-menu custom-restricted-width">
+                <a class="pure-menu-heading" href="#name">Name</a>
+                <ul class="pure-menu-list">
+                <li class="pure-menu-item">
                     <a href="#sec-1" class="pure-menu-link">Is there a fire?</a>
                 </li>
                 <li class="pure-menu-item">
@@ -27,10 +35,46 @@
                 <li class="pure-menu-item">
                     <a href="#sec-4" class="pure-menu-link">Is your home ready?</a>
                 </li>
-            </ul>
-        </div>    
+                </ul>
+            </div>
+        </div>      
     </div>
+        <!-- MAIN CONTENT-->
+        <div id="main">
+            <header class="header">
+                <h1>California Wildfire Response Mobile App</h1>
+                <h2>Subtitle...</h2>
+            </header>
 
+<<<<<<< HEAD
+            <div class="content">
+                <div class="pure-g">
+                    <!-- SEC 1-2: INCIDENT MAP-->
+                    <div class="inc-map pure-u-1-2" id="sec-1">
+                        <h2 class="content-subhead">Is there a fire near you?</h2>
+                    </div>
+                    <div class="weather pure-u-1-2" id="sec-2">
+                        <h2 class="content-subhead">What's the fire weather near you?</h2>
+                    </div>
+                </div>
+                <!-- SEC 3: ARE YOU READY LIST-->
+                <div class="you-ready" id="sec-3">
+                    <h2 class="content-subhead">Are you ready for a wildfire emergency?</h2>
+                </div>
+                <!-- SEC 4: HOME READY LIST-->
+                <div class="home-ready" id="sec-4">
+                    <h2 class="content-subhead">Is your home ready for wildfire?</h2>
+                </div>
+                <!-- SEC 5-6: LINKS, FIRE SAFE COUNCIL-->
+                <div class="pure-g"> 
+                    <div class="fire-safe pure-u-1-2" id="sec-5">
+                        <h2 class="content-subhead">Find your Fire Safe Council</h2>
+                    </div>
+                    <div class="links pure-u-1-2" id="sec-6">
+                        <h2 class="content-subhead">Helpful Links</h2>
+                    </div>
+                </div>
+=======
     <!-- MAIN CONTENT-->
     <div id="main">
         <header>
@@ -42,25 +86,9 @@
             <!-- SEC 1: INCIDENT MAP-->
             <div class="inc-map" id="sec-1">
                 <h2>Is there a fire near you?</h2>
+>>>>>>> 5bcd320bd27598cb148c43814033b162a2425cae
             </div>
-            <!-- SEC 2: WEATHER-->
-            <div class="weather" id="sec-2">
-                <h2>What's the fire weather near you?</h2>
-            </div>
-            <!-- SEC 3: ARE YOU READY LIST-->
-            <div class="you-ready" id="sec-3">
-                <h2>Are you ready for a wildfire emergency?</h2>
-            </div>
-            <!-- SEC 4: HOME READY LIST-->
-            <div class="home-ready" id="sec-4">
-                <h2>Is your home ready for wildfire?</h2>
-            </div>
-            <!-- SEC 5: FIRE SAFE COUNCIL-->
-            <div class="fire-safe" id="sec-5">
-                <h2>Find your Fire Safe Council</h2>
-            </div>
-        </div>
-    </div>        
+        </div>      
         
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="./assets/js/script.js"></script>
