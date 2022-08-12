@@ -4,19 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style link="" href=""></style>
+    <title>California Wildfire Readiness Mobile App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/2.1.0/pure-min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/base-min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <header></header>
-    <nav>
-        <ul class="list_navigation">
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-        </ul>
-    </nav>
-    <section></section>
+    <!-- NAV/MENU-->
+    <div id="layout">
+        <div class="pure-menu custom-restricted-width" id="menu">
+            <ul class="pure-menu-list">
+                <li class=pure-menu-item>
+                    <a href="#sec-1" class="pure-menu-link">Is there a fire?</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#sec-2" class="pure-menu-link">Fire weather</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#sec-3" class="pure-menu-link">Are you ready?</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#sec-4" class="pure-menu-link">Is your home ready?</a>
+                </li>
+            </ul>
+        </div>    
+    </div>
+
+    <!-- MAIN CONTENT-->
+    <div id="main">
+        <header>
+            <h1>California Wildfire Response Mobile App</h1>
+            <h2>Subtitle...</h2>
+        </header>
+
+        <div class="content">
+            <!-- SEC 1: INCIDENT MAP-->
+            <div class="inc-map" id="sec-1">
+                <h2>Is there a fire near you?</h2>
+            </div>
+            <!-- SEC 2: WEATHER-->
+            <div class="weather" id="sec-2">
+                <h2>What's the fire weather near you?</h2>
+            </div>
+            <!-- SEC 3: ARE YOU READY LIST-->
+            <div class="you-ready" id="sec-3">
+                <h2>Are you ready for a wildfire emergency?</h2>
+            </div>
+            <!-- SEC 4: HOME READY LIST-->
+            <div class="home-ready" id="sec-4">
+                <h2>Is your home ready for wildfire?</h2>
+            </div>
+            <!-- SEC 5: FIRE SAFE COUNCIL-->
+            <div class="fire-safe" id="sec-5">
+                <h2>Find your Fire Safe Council</h2>
+            </div>
+        </div>
+    </div>        
+        
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="./assets/js/script.js"></script>
+
 </body>
 </html>
