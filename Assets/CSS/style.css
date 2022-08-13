@@ -2,32 +2,33 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1;
-  }
+    background: rgba(128, 128, 128, 0.537);
+}
 
-  header {
+header {
     color: rgb(45, 44, 44);
     text-shadow: 1px 1px 2px rgb(26, 60, 105);
     background-color: rgb(69, 144, 250);
     padding: 20px 35px;
     border: solid rgb(45, 44, 44) 1px;
     border-radius: 30px;
-  }
+}
 
-  .custom-restricted-width {
+.custom-restricted-width {
     display: inline-block;
-  }
+}
 
-  #layout {
-    font-size: 16px;
-    font-weight: bold;
+.pure-menu-heading {
     color: black;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgb(69, 31, 17);
-    background-color: rgb(250, 115, 65);
-    padding: 10px;
-  }
+    display: flex;
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    background: gray;
+    border: solid black 1px;
+}
 
-  #menu {
+#menu {
     margin-left: -150px;
     width: 150px;
     position: fixed;
@@ -39,19 +40,33 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: black;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgb(69, 31, 17);
     overflow-y: auto;
-  }
-  
-  .pure-menu-item {
+}
+
+#pure-menu-list {
     color: black;
-    display: flex-wrap;
-    margin: 5px; 
-  }
+    display: flex; 
+    text-shadow: 1px 1px 2px rgb(69, 31, 17);
+}
+
+.pure-menu-link {
+    overflow-y: auto;
+    margin: 0 auto;
+    color: black;
+    text-decoration: none;
+}
+
+.pure-menu-item {
+    color: black;
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 5px;
+}
 
 /* Add transition to containers so they can push in and out. */
-#layout, #menu, .menu-link {
+#layout,
+#menu,
+.menu-link {
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
@@ -64,67 +79,51 @@ body {
     left: 0;
     padding-left: 0;
 }
-    #layout.active #menu {
-        left: 150px;
-        width: 150px;
-    }
 
-    #layout.active .menu-link {
-        left: 150px;
-      }
+#layout.active #menu {
+    left: 150px;
+    width: 150px;
+}
 
+#layout.active .menu-link {
+    left: 150px;
+}
 
-/* All anchors inside the menu should be styled like this. */
-    #menu a {
-        color: #999;
-        border: none;
-        padding: 0.6em 0 0.6em 0.6em;
-    }
+/* Remove all background/borders, since we are applying them to #menu. */
+#menu .pure-menu,
+#menu .pure-menu ul {
+    border: none;
+    background: transparent;
+}
 
-    /* Remove all background/borders, since we are applying them to #menu. */
-     #menu .pure-menu,
-     #menu .pure-menu ul {
-        border: none;
-        background: transparent;
-    }
+/* Add that light border to separate items into groups. */
+#menu .pure-menu ul,
+#menu .pure-menu .menu-item-divided {
+    border-top: 1px solid #333;
+}
 
-    /* Add that light border to separate items into groups. */
-    #menu .pure-menu ul,
-    #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid #333;
-    }
-        /*
+/*
         Change color of the anchor links on hover/focus.
         */
-        #menu .pure-menu li a:hover,
-        #menu .pure-menu li a:focus {
-            background: #333;
-        }
+#menu .pure-menu li a:hover,
+#menu .pure-menu li a:focus {
+    background: #333;
+    color: whitesmoke;
+}
 
-    /*
+/*
     This styles the selected menu item `<li>`.
     */
-    #menu .pure-menu-selected,
-    #menu .pure-menu-heading {
-        background: #1f8dd6;
-    }
-        /*
-        This styles a link within a selected menu item `<li>`.
-        */
-        #menu .pure-menu-selected a {
-            color: #fff;
-        }
+#menu .pure-menu-selected {
 
-    /*
-    This styles the menu heading.
-    */
-    #menu .pure-menu-heading {
-        font-size: 110%;
-        color: #fff;
-        margin: 0;
-    }
+}
+/* Styles a link within a selected menu item `<li>`. */
+#menu .pure-menu-selected a {
+    color: whitesmoke;
+    background: #333;
+}
 
-    /* CONTENT STYLES*/
+/* CONTENT STYLES*/
 .content {
     margin: 0 auto;
     padding: 0 2em;
@@ -133,54 +132,56 @@ body {
     line-height: 1.6em;
 }
 
-
-    /*
+/*
 `.menu-link` represents the responsive menu toggle that shows/hides on
 small screens.
 */
 .menu-link {
     position: fixed;
-    display: block; /* show this only on small screens */
+    display: block;
+    /* show this only on small screens */
     top: 0;
-    left: 0; /* "#menu width" */
+    left: 0;
+    /* "#menu width" */
     background: #000;
-    background: rgba(0,0,0,0.7);
-    font-size: 10px; /* change this value to increase/decrease button size */
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 10px;
+    /* change this value to increase/decrease button size */
     z-index: 10;
     width: 2em;
     height: auto;
     padding: 2.1em 1.6em;
 }
 
-    .menu-link:hover,
-    .menu-link:focus {
-        background: #000;
-    }
+.menu-link:hover,
+.menu-link:focus {
+    background: #000;
+}
 
-    .menu-link span {
-        position: relative;
-        display: block;
-    }
+.menu-link span {
+    position: relative;
+    display: block;
+}
 
-    .menu-link span,
-    .menu-link span:before,
-    .menu-link span:after {
-        background-color: #fff;
-        pointer-events: none;
-        width: 100%;
-        height: 0.2em;
-    }
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+    background-color: #fff;
+    pointer-events: none;
+    width: 100%;
+    height: 0.2em;
+}
 
-        .menu-link span:before,
-        .menu-link span:after {
-            position: absolute;
-            margin-top: -0.6em;
-            content: " ";
-        }
+.menu-link span:before,
+.menu-link span:after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+}
 
-        .menu-link span:after {
-            margin-top: 0.6em;
-        }
+.menu-link span:after {
+    margin-top: 0.6em;
+}
 
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
@@ -197,9 +198,11 @@ Hides the menu at `48em`
     }
 
     #layout {
-        padding-left: 150px; /* left col width "#menu" */
+        padding-left: 150px;
+        /* left col width "#menu" */
         left: 0;
     }
+
     #menu {
         left: 150px;
     }
@@ -216,6 +219,7 @@ Hides the menu at `48em`
 }
 
 @media (max-width: 48em) {
+
     /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
@@ -226,4 +230,101 @@ Hides the menu at `48em`
         position: relative;
         left: 150px;
     }
+}
+
+/* Are you ready list */
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.wrap-section1, 
+.wrap-section2,
+.wrap-section3,
+.wrap-section4, 
+.wrap-section5,
+.wrap-section6 {
+    margin: 1.2rem 0;
+}
+
+.lbl-toggle {
+    display: block;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    color: #DDD;
+    background: #0069ff;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+    color: #FFF;
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+}
+
+.toggle:checked+.lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.section1-content,
+.section2-content,
+.section3-content,
+.section4-content,
+.section5-content,
+.section6-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked+.lbl-toggle+.section1-content,
+.toggle:checked+.lbl-toggle+.section2-content,
+.toggle:checked+.lbl-toggle+.section3-content,
+.toggle:checked+.lbl-toggle+.section4-content,
+.toggle:checked+.lbl-toggle+.section5-content,
+.toggle:checked+.lbl-toggle+.section6-content {
+    max-height: 350px;
+}
+
+.toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.section1-content .content-inner,
+.section2-content .content-inner,
+.section3-content .content-inner,
+.section4-content .content-inner
+.section5-content .content-inner,
+.section6-content .content-inner {
+    background: rgba(0, 105, 255, .2);
+    border-bottom: 1px solid rgba(0, 105, 255, .45);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+}
+
+.section1-content p,
+.section2-content p,
+.section3-content p,
+.section4-content p,
+.section5-content p,
+.section6-content p {
+    margin-bottom: 0;
 }
