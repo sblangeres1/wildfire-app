@@ -20,7 +20,7 @@
         </header>
         <div class="pure-menu custom-restricted-width pure-g" id="menu">
             <a class="pure-menu-heading pure-u-1" 
-            href="#weather-data">Weather Data from API?</a>
+            href="#weather-data">API weather data</a>
             <ul class="pure-menu-list pure-g">
                 <li class="pure-menu-item pure-u-1">
                     <a href="#sec-1" class="pure-menu-link">Is there a fire?</a>
@@ -45,20 +45,37 @@
 
     <!-- MAIN CONTENT-->
         <div class="content" id="main">
-            <section class="pure-g">
-                <!-- SEC 1-2: INCIDENT MAP-->
-                <div class="inc-map pure-u-1-2" id="sec-1">
-                    <h2 class="content-subhead">Is there a fire near you?</h2>
+            <section class="pure-g" id="sec1-2-grid">
+                <div class="wrap-collapsible wrap-section1 pure-u-1-2"> 
+                    <input id="section1" class="pure-u-1-2 toggle" type="checkbox"> 
+                    <label for="section1" class="lbl-toggle">Is there a fire near you?</label>
+                    <div class="collapsible-content section1-content">
+                        <div class="content-inner">
+                            <p> 
+                                Embed and/or API cal fire incident map data 
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="weather pure-u-1-2" id="sec-2">
-                    <h2 class="content-subhead">What's the fire weather near you?</h2>
+                <div class="wrap-collapsible wrap-section2 pure-u-1-2"> 
+                    <input id="section2" class="pure-u-1-2 toggle" type="checkbox"> 
+                    <label for="section2" class="lbl-toggle">What is your fire weather?</label>
+                    <div class="collapsible-content section2-content">
+                        <div class="content-inner">
+                            <p> 
+                                Embed and/or API weather map data 
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <!-- SEC 3: ARE YOU READY LIST-->
-            <section class="pure-g wrap-section3" id="sec3-4-grid"> 
-                <input id="section3" class="pure-u-1-2 toggle" type="checkbox"> 
-                <label for="section3" class="lbl-toggle">Are you ready?</label>
-                    <div class="pure-u-1-2 sect-content">
+
+            <!-- SEC 3-4: READY LISTS-->
+            <section class="pure-g" id="sec3-4-grid">
+                <div class="wrap-collapsible wrap-section3 pure-u-1-2"> 
+                    <input id="section3" class="pure-u-1-2 toggle" type="checkbox"> 
+                    <label for="section3" class="lbl-toggle">Are you ready?</label>
+                    <div class="collapsible-content section3-content">
                         <div class="content-inner">
                             <p> 
                                 Put list here
@@ -66,28 +83,42 @@
                         </div>
                     </div>
                 </div>
-                <div input id="collapsible" class=" pure-u-1-2 wrap-collapsible toggle" type="checkbox"> <label
-                    for="collapsible" class="lbl-toggle">Is your home ready?</label>
-                <div class="pure-u-1-2 collapsible-content">
-                    <div class="content-inner">
-                        <p> 
-                            Put list here
-                        </p>
+                <div class="wrap-collapsible wrap-section4 pure-u-1-2"> 
+                    <input id="section4" class="pure-u-1-2 toggle" type="checkbox"> 
+                    <label for="section4" class="lbl-toggle">Is your home ready?</label>
+                    <div class="collapsible-content section4-content">
+                        <div class="content-inner">
+                            <p> 
+                                Put list here
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>                                
             </section>
-            <!-- SEC 4: HOME READY LIST-->
-            <section class="home-ready" id="sec-4">
-                <h2 class="content-subhead">Is your home ready for wildfire?</h2>
-            </section>
+    
             <!-- SEC 5-6: LINKS, FIRE SAFE COUNCIL-->
-            <section class="pure-g">
-                <div class="fire-safe pure-u-1-2" id="sec-5">
-                    <h2 class="content-subhead">Find your Fire Safe Council</h2>
+            <section class="pure-g" id="sec5-6-grid">
+                <div class="wrap-collapsible wrap-section5 pure-u-1-2"> 
+                    <input id="section5" class="pure-u-1-2 toggle" type="checkbox"> 
+                    <label for="section5" class="lbl-toggle">Your Fire Safe Council</label>
+                    <div class="collapsible-content section5-content">
+                        <div class="content-inner">
+                            <p> 
+                                Embed and/or API data fsc map
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="links pure-u-1-2" id="sec-6">
-                    <h2 class="content-subhead">Helpful Links</h2>
+                <div class="wrap-collapsible wrap-section6 pure-u-1-2"> 
+                    <input id="section6" class="pure-u-1-2 toggle" type="checkbox"> 
+                    <label for="section6" class="lbl-toggle">Useful Links</label>
+                    <div class="collapsible-content section6-content">
+                        <div class="content-inner">
+                            <p> 
+                                List links
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
