@@ -1,3 +1,8 @@
+:root {
+    --primary-color: rgb(69, 144, 250);
+    --secondary-color: rgb(69, 144, 250);
+    --tertiary-color: rgb(250, 115, 65);
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -11,7 +16,6 @@ header {
     background-color: rgb(69, 144, 250);
     padding: 20px 35px;
     border: solid rgb(45, 44, 44) 1px;
-    border-radius: 30px;
 }
 
 .custom-restricted-width {
@@ -63,6 +67,22 @@ header {
     margin: 5px;
 }
 
+/* CONTENT STYLES*/
+.content {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+#sec1-2-grid, #sec3-4-grid, #sec5-6-grid {
+    color: black;
+    display: flex; 
+    text-shadow: 1px 1px 2px rgb(69, 31, 17);
+}
+
+
 /* Add transition to containers so they can push in and out. */
 #layout,
 #menu,
@@ -96,24 +116,20 @@ header {
     background: transparent;
 }
 
-/* Add that light border to separate items into groups. */
+/* Light border to separate items into groups. */
 #menu .pure-menu ul,
 #menu .pure-menu .menu-item-divided {
     border-top: 1px solid #333;
 }
 
-/*
-        Change color of the anchor links on hover/focus.
-        */
+/*Change color of the anchor links on hover/focus.*/
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
     background: #333;
     color: whitesmoke;
 }
 
-/*
-    This styles the selected menu item `<li>`.
-    */
+/*This styles the selected menu item `<li>`. */
 #menu .pure-menu-selected {
 
 }
@@ -123,19 +139,8 @@ header {
     background: #333;
 }
 
-/* CONTENT STYLES*/
-.content {
-    margin: 0 auto;
-    padding: 0 2em;
-    max-width: 800px;
-    margin-bottom: 50px;
-    line-height: 1.6em;
-}
 
-/*
-`.menu-link` represents the responsive menu toggle that shows/hides on
-small screens.
-*/
+/*`.menu-link` represents the responsive menu toggle that shows/hides on small screens.*/
 .menu-link {
     position: fixed;
     display: block;
@@ -186,11 +191,8 @@ small screens.
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
-/*
-Hides the menu at `48em`
-*/
+/*Hides the menu at `48em`*/
 @media (min-width: 48em) {
-
     .header,
     .content {
         padding-left: 2em;
@@ -219,7 +221,6 @@ Hides the menu at `48em`
 }
 
 @media (max-width: 48em) {
-
     /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
@@ -233,37 +234,31 @@ Hides the menu at `48em`
 }
 
 /* Are you ready list */
-
 input[type='checkbox'] {
     display: none;
 }
 
-.wrap-section1, 
-.wrap-section2,
-.wrap-section3,
-.wrap-section4, 
-.wrap-section5,
-.wrap-section6 {
+.wrap-section1, .wrap-section2,.wrap-section3, .wrap-section4, .wrap-section5, .wrap-section6 {
     margin: 1.2rem 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .lbl-toggle {
-    display: block;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.2rem;
-    text-transform: uppercase;
+    font-size: 1.2;
     text-align: center;
+    color: rgb(45, 44, 44);
+    text-shadow: 1px 1px 2px rgb(26, 60, 105);
+    background-color: rgb(69, 144, 250);
     padding: 1rem;
-    color: #DDD;
-    background: #0069ff;
     cursor: pointer;
+    border: solid black 1px;
     border-radius: 7px;
     transition: all 0.25s ease-out;
 }
 
 .lbl-toggle:hover {
-    color: #FFF;
+    background-color: whitesmoke;
 }
 
 .lbl-toggle::before {
