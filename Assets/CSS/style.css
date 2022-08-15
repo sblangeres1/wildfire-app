@@ -1,7 +1,23 @@
+:root {
+    --primary-color: rgb(100, 159, 204);
+    --secondary-color: rgb(212, 149, 83);
+    --tertiary-color: rgba(128,128,128,0.537);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1;
+    background: var(--tertiary-color);
+}
+
+header {
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px rgb(60, 60, 60);
+    background-image: url(../images/header-bg.jpg);
+    background-size: cover; 
+    padding: 20px 35px;
+    border-bottom: solid black 3px;
 }
 
 header {
@@ -16,6 +32,15 @@ header {
 .custom-restricted-width {
     display: inline-block;
 }
+
+.pure-menu-heading {
+    color: black;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    background: gray;
+    border: solid black 1px;
 
 #layout {
     font-size: 16px;
@@ -35,13 +60,42 @@ header {
     left: 0;
     bottom: 0;
     z-index: 1000;
-    background-color: rgb(250, 115, 65);
+    background-color: var(--secondary-color);
     font-size: 16px;
     font-weight: bold;
     color: black;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgb(69, 31, 17);
     overflow-y: auto;
+    border-right: solid black 2px;
+}
+
+.pure-menu-link {
+    color: black;
+    text-shadow: rgb(60, 60, 60);
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+.pure-menu-item {
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 5px;
+}
+
+/* CONTENT STYLES*/
+.content {
+    margin: 0 auto;
+    padding: 0 2em;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+#sec1-2-grid, #sec3-4-grid, #sec5-6-grid {
+    color: black;
+    display: flex; 
+    font-weight: bold;
+    text-shadow: 1px 1px 1px );
+}
+
 }
 
 .pure-menu-item {
@@ -76,7 +130,53 @@ header {
     left: 150px;
 }
 
+#layout.active .menu-link {
+    left: 150px;
+}
 
+/* Remove all background/borders, since we are applying them to #menu. */
+#menu .pure-menu,
+#menu .pure-menu ul {
+    border: none;
+    background: transparent;
+}
+
+/* Light border to separate items into groups. */
+#menu .pure-menu ul,
+#menu .pure-menu .menu-item-divided {
+    border-top: 1px solid #333;
+}
+
+/*Change color of the anchor links on hover/focus.*/
+#menu .pure-menu li a:hover,
+#menu .pure-menu li a:focus {
+    color: whitesmoke;
+    font-weight: bold; 
+    text-shadow: 1px 1px 1px rgb(60,60,60);
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
+}
+
+/*This styles the selected menu item `<li>`. */
+#menu .pure-menu-selected {
+    color: whitesmoke;
+    font-weight: bold; 
+    text-shadow: 1px 1px 1px rgb(60,60,60);
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
+}
+
+/* Styles a link within a selected menu item `<li>`. */
+#menu .pure-menu-selected a {
+    color: whitesmoke;
+    font-weight: bold; 
+    text-shadow: 1px 1px 1px rgb(60,60,60);
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
+}
+
+
+/*`.menu-link` represents the responsive menu toggle that shows/hides on small screens.*/
 /* All anchors inside the menu should be styled like this. */
 #menu a {
     color: #999;
@@ -143,6 +243,7 @@ header {
 `.menu-link` represents the responsive menu toggle that shows/hides on
 small screens.
 */
+
 .menu-link {
     position: fixed;
     display: block;
@@ -162,6 +263,11 @@ small screens.
 
 .menu-link:hover,
 .menu-link:focus {
+    color: whitesmoke;
+    font-weight: bold; 
+    text-shadow: 1px 1px 1px rgb(60,60,60);
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
     background: #000;
 }
 
@@ -190,14 +296,113 @@ small screens.
     margin-top: 0.6em;
 }
 
+/* Dropdowns */
+input[type='checkbox'] {
+    display: none;
+}
+
+.wrap-section1, .wrap-section2,.wrap-section3, .wrap-section4, .wrap-section5, .wrap-section6 {
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lbl-toggle {
+    text-align: center;
+    color: rgb(45, 44, 44);
+    text-shadow: 1px 1px 2px rgb(26, 60, 105);
+    background-color: var(--primary-color);
+    padding: 1rem;
+    cursor: pointer;
+    border: solid black 2px;
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.lbl-toggle:hover {
+    background-color: rgba(0,0,0,.5);
+    color: whitesmoke;
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+}
+
+.toggle:checked+.lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.section1-content,
+.section2-content,
+.section3-content,
+.section4-content,
+.section5-content,
+.section6-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle:checked+.lbl-toggle+.section1-content,
+.toggle:checked+.lbl-toggle+.section2-content,
+.toggle:checked+.lbl-toggle+.section3-content,
+.toggle:checked+.lbl-toggle+.section4-content,
+.toggle:checked+.lbl-toggle+.section5-content,
+.toggle:checked+.lbl-toggle+.section6-content {
+    max-height: 350px;
+}
+
+.toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.section1-content .content-inner,
+.section2-content .content-inner,
+.section3-content .content-inner,
+.section4-content .content-inner
+.section5-content .content-inner,
+.section6-content .content-inner {
+    padding: .5rem 1rem;
+}
+
+.section1-content p,
+.section2-content p,
+.section3-content p,
+.section4-content p,
+.section5-content p,
+.section6-content p {
+    margin-bottom: 0;
+
+.menu-link span:before,
+.menu-link span:after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+}
+
+.menu-link span:after {
+    margin-top: 0.6em;
+}
+
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
-/*
-Hides the menu at `48em`
-*/
+/*Hides the menu at `48em`*/
 @media (min-width: 48em) {
-
     .header,
     .content {
         padding-left: 2em;
@@ -226,9 +431,11 @@ Hides the menu at `48em`
 }
 
 @media (max-width: 48em) {
+    /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
 
     /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
+
         * Make the window small.
         * Tap the menu to trigger the active state.
         * Make the window large again.
@@ -237,6 +444,12 @@ Hides the menu at `48em`
         position: relative;
         left: 150px;
     }
+    
+    .header {
+        font-size: 13px;
+    }
+}
+
 }
 
 /* Are you ready list */
