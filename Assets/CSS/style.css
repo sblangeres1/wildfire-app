@@ -1,21 +1,21 @@
 :root {
-    --primary-color: rgb(69, 144, 250);
-    --secondary-color: rgb(69, 144, 250);
-    --tertiary-color: rgb(250, 115, 65);
-    --fourth-color: rgba(128,128,128,0.537);
+    --primary-color: rgb(100, 159, 204);
+    --secondary-color: rgb(212, 149, 83);
+    --tertiary-color: rgba(128,128,128,0.537);
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1;
-    background: var(--fourth-color);
+    background: var(--tertiary-color);
 }
 
 header {
-    color: rgb(45, 44, 44);
-    text-shadow: 1px 1px 2px rgb(26, 60, 105);
-    background-color: rgb(69, 144, 250);
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px rgb(60, 60, 60);
+    background-image: url(../images/header-bg.jpg);
+    background-size: cover; 
     padding: 20px 35px;
     border-bottom: solid black 3px;
 }
@@ -42,28 +42,22 @@ header {
     left: 0;
     bottom: 0;
     z-index: 1000;
-    background-color: rgb(250, 115, 65);
+    background-color: var(--secondary-color);
     font-size: 16px;
     font-weight: bold;
     color: black;
     overflow-y: auto;
-}
-
-#pure-menu-list {
-    color: black;
-    display: flex; 
-    text-shadow: 1px 1px 2px rgb(69, 31, 17);
+    border-right: solid black 2px;
 }
 
 .pure-menu-link {
-    overflow-y: auto;
-    margin: 0 auto;
     color: black;
+    text-shadow: rgb(60, 60, 60);
     text-decoration: none;
+    overflow-wrap: break-word;
 }
 
 .pure-menu-item {
-    color: black;
     display: flex;
     flex-wrap: wrap; 
     margin: 5px;
@@ -80,8 +74,8 @@ header {
 #sec1-2-grid, #sec3-4-grid, #sec5-6-grid {
     color: black;
     display: flex; 
-    text-weight: bold;
-    text-shadow: 1px 1px 2px rgb(69, 31, 17);
+    font-weight: bold;
+    text-shadow: 1px 1px 1px );
 }
 
 
@@ -127,18 +121,29 @@ header {
 /*Change color of the anchor links on hover/focus.*/
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
-    background: #333;
     color: whitesmoke;
+    font-weight: bold; 
+    text-shadow: 1px 1px 1px rgb(60,60,60);
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
 }
 
 /*This styles the selected menu item `<li>`. */
 #menu .pure-menu-selected {
-
+    color: whitesmoke;
+    font-weight: bold; 
+    text-shadow: 1px 1px 1px rgb(60,60,60);
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
 }
+
 /* Styles a link within a selected menu item `<li>`. */
 #menu .pure-menu-selected a {
     color: whitesmoke;
-    background: #333;
+    font-weight: bold; 
+    text-shadow: 1px 1px 1px rgb(60,60,60);
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
 }
 
 
@@ -162,7 +167,11 @@ header {
 
 .menu-link:hover,
 .menu-link:focus {
-    background: #000;
+    color: whitesmoke;
+    font-weight: bold; 
+    text-shadow: 1px 1px 1px rgb(60,60,60);
+    background-color: var(--tertiary-color);
+    border-radius: 7px;
 }
 
 .menu-link span {
@@ -213,10 +222,12 @@ input[type='checkbox'] {
     border-radius: 7px;
     transition: all 0.25s ease-out;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .lbl-toggle:hover {
-    background-color: whitesmoke;
+    background-color: rgba(0,0,0,.5);
+    color: whitesmoke;
 }
 
 .lbl-toggle::before {
@@ -244,6 +255,8 @@ input[type='checkbox'] {
     max-height: 0px;
     overflow: hidden;
     transition: max-height .25s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 
 .toggle:checked+.lbl-toggle+.section1-content,
@@ -266,10 +279,6 @@ input[type='checkbox'] {
 .section4-content .content-inner
 .section5-content .content-inner,
 .section6-content .content-inner {
-    background: rgba(0, 105, 255, .2);
-    border-bottom: 1px solid rgba(0, 105, 255, .45);
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
     padding: .5rem 1rem;
 }
 
