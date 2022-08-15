@@ -61,3 +61,6 @@ This project will be a centerpiece for your portfolio and your first opportunity
 [Deployed Gitpage](insert link here)
 
 ## Credits
+
+1. Information about Pure.css by [PURE](https://purecss.io/)
+2. Article about Implementing a Pure CSS Collapsible by [Community](https://www.digitalocean.com/community/tutorials/css-collapsible)
