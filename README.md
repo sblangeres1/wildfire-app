@@ -63,3 +63,4 @@ This project will be a centerpiece for your portfolio and your first opportunity
 
 1. Information about Pure.css by [PURE](https://purecss.io/)
 2. Article about Implementing a Pure CSS Collapsible by [Community](https://www.digitalocean.com/community/tutorials/css-collapsible)
+3. Article about [Checklists](https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3)
