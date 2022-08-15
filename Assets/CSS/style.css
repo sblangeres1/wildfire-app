@@ -183,7 +183,7 @@ padding: 0px 300px;
   }
   
   .sec1-content,
-  .sec2-content,
+  .sec2-content, 
   .sec3-content,
   .sec4-content,
   .sec5-content,
@@ -272,4 +272,4 @@ padding: 0px 300px;
 
 .checkbox input[type="checkbox"]:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
-} 
+
