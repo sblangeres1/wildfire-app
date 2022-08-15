@@ -1,7 +1,8 @@
-# wildfire-app
+# Califoria Wildfire Readiness Mobile App
+![screenshot of landing page](/assets/images/screenshot.jpeg)
 
-Just writing some text to test if my git connection is working...
+## Description
+As California residents, we wanted a mobile app to help us preprae for a wildfire emergency so that we could plan and track our readiness level, and quickly access resources and information during a wildfire. Here is a link to the [deployed page.](https://nverhulp.github.io/wildfire-app/)
 
-headings
-created new branch dvelop
-created new branch feature/basic-layout
+## Contributors
+This app was built collaboratively by Scott Blangeres (JavaScript, API), Abigail Queen (HTML, CSS), Truman Stephenson (JavaScript, API), Nicole Verhulp (HTML, CSS). 
