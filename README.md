@@ -1,5 +1,5 @@
 # Califoria Wildfire Readiness Mobile App
-![screenshot of landing page](/assets/images/screenshot.jpeg)
+![screenshot of landing page](/Assets/Images/screenshot.jpg)
 
 ## Description
 As California residents, we wanted a mobile app to help us preprae for a wildfire emergency so that we could plan and track our readiness level, and quickly access resources and information during a wildfire. Here is a link to the [deployed page.](https://nverhulp.github.io/wildfire-app/)
