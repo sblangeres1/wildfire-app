@@ -273,3 +273,15 @@ padding: 0px 300px;
 .checkbox input[type="checkbox"]:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
 
+}
+
+/* Footer */
+footer {
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
