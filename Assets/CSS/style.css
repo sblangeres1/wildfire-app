@@ -1,6 +1,6 @@
 :root {
     --primary-color: rgb(100, 159, 204);
-    --secondary-color: rgb(212, 149, 83);
+    --secondary-color: rgb(230, 155, 75);
     --tertiary-color: rgb(158, 158, 158);
     --fourth-color: rgb(176, 4, 4); 
 }
@@ -29,6 +29,10 @@ header {
 html, body {
     overflow-x: hidden;
     height: 100%;
+}
+
+main {
+    width: 70%;
 }
 
 #menu {
@@ -142,11 +146,6 @@ html, body {
     max-width: 800px;
     margin-bottom: 50px;
     line-height: 1.6em;
-}
-
-#sec3-4-grid {
-    display: flex;
-    justify-content: space-around;
 }
 
 /*
@@ -341,6 +340,12 @@ main {
 padding: 0px 300px;
 }
 
+.subtitle {
+    line-height: 1;
+    font-size: 14px; 
+    color: rgb(60, 60, 60);
+}
+
 .wrap-sec1,
 .wrap-sec2,
 .wrap-sec3,
@@ -348,47 +353,41 @@ padding: 0px 300px;
 .wrap-sec5,
 .wrap-sec6 {
     margin-bottom: 1.2rem 0;
+    border-bottom: var(--tertiary-color) solid 6px;
   }
   
   input[type='checkbox'] {
     display: none;
   }
-  
+
   .lbl-toggle {
-    display: block;
-  
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: center;
-  
+    display: block;  
     padding: 20px;
-  
-    color: white;
-    background: orange;
-  
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: rgb(60, 60, 60) 1px 1px 1px;
+    background: var(--secondary-color);
     cursor: pointer;
-  
     border-radius: 7px;
     transition: all 0.25s ease-out;
   }
   
   .lbl-toggle:hover {
-    color: var(--fourth-color);
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.1);
+    text-shadow: none;
   }
   
   .lbl-toggle::before {
     content: ' ';
     display: inline-block;
-  
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-left: 5px solid currentColor;
     vertical-align: middle;
     margin-right: .7rem;
     transform: translateY(-2px);
-  
     transition: transform .2s ease-out;
   }
   
@@ -427,7 +426,7 @@ padding: 0px 300px;
   .sec4-content .content-inner,
   .sec5-content .content-inner,
   .sec6-content .content-inner {
-    background: lightgray;
+    background: var(--primary-color);
     border-bottom: 1px solid rgba(250, 224, 66, .45);
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
