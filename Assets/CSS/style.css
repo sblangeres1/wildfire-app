@@ -69,6 +69,7 @@ This is the parent `<div>` that contains the menu and the content area.
 .corner-img {
     display: flex;
     align-items: center; 
+    justify-content: space-around;
 }
 
 /* MAIN CONTENT */
