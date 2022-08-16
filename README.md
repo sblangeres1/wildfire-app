@@ -1,6 +1,14 @@
-# Wildfire App
+# Califoria Wildfire Readiness Mobile App
+![Deployed Page](./Assets/Images/deployedpage-1.png)
+![Deployed Page](./Assets/Images/deployedpage-2.png)
 
 ## Description
+As California residents, we wanted a mobile app to help us preprae for a wildfire emergency so that we could plan and track our readiness level, and quickly access resources and information during a wildfire. Here is a link to the [deployed page.](https://nverhulp.github.io/wildfire-app/)
+
+## Contributors
+This app was built collaboratively by Scott Blangeres (JavaScript, API), Abigail Queen (HTML, CSS), Truman Stephenson (JavaScript, API), Nicole Verhulp (HTML, CSS). 
+
+## Project Description
 
 Projects are extremely important on your journey to becoming a full-stack web developer. As you get further along in the boot camp, you’ll find opportunities to apply for web developer roles. Among the first requirements you’ll need to even get an interview are high-quality deployed examples of your work featured in your portfolio.
 
@@ -52,3 +60,7 @@ This project will be a centerpiece for your portfolio and your first opportunity
 [Deployed Gitpage](insert link here)
 
 ## Credits
+
+1. Information about Pure.css by [PURE](https://purecss.io/)
+2. Article about Implementing a Pure CSS Collapsible by [Community](https://www.digitalocean.com/community/tutorials/css-collapsible)
+3. Article about [Checklists](https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3)
