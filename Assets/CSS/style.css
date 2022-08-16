@@ -2,6 +2,7 @@
     --primary-color: rgb(100, 159, 204);
     --secondary-color: rgb(212, 149, 83);
     --tertiary-color: rgb(158, 158, 158);
+    --fourth-color: rgb(176, 4, 4); 
 }
 
 /* Body */
@@ -30,20 +31,11 @@ html, body {
     height: 100%;
 }
 
-.pure-menu-heading {
-    color: black;
-    display: flex;
-    flex-grow: 1;
-    margin: 0 auto;
-    text-align: center;
-    background: gray;
-    border: solid black 1px;
-}
-
 #menu {
     margin-left: -150px;
     width: 150px;
 }
+
 #sidebarMenu {
     height: 100%;
     position: fixed;
@@ -51,27 +43,23 @@ html, body {
     width: 250px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: red;
+    background: var(--fourth-color);
 }
 
 .sidebarMenuInner li{
     list-style: none;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: black;
     overflow-y: auto;
 }
 
 #pure-menu-list {
-    color: black;
     display: flex; 
-    text-shadow: 1px 1px 2px rgb(69, 31, 17);
 }
 
 .pure-menu-link {
     overflow-y: auto;
     margin: 0 auto;
+    text-shadow: rgb(60, 60, 60);    
+    font-weight: bold;
     color: black;
     text-decoration: none;
 }
@@ -107,6 +95,10 @@ html, body {
 
 #layout.active .menu-link {
     left: 150px;
+    text-shadow: rgb(60, 60, 60);    
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 
 /* Remove all background/borders, since we are applying them to #menu. */
@@ -383,7 +375,7 @@ padding: 0px 300px;
   }
   
   .lbl-toggle:hover {
-    color: red;
+    color: var(--fourth-color);
   }
   
   .lbl-toggle::before {
@@ -469,7 +461,7 @@ padding: 0px 300px;
 .checkbox label::before{
     height: 16px;
     width: 16px;
-    border: 1px solid red;
+    border: 1px solid var(--fourth-color);
     left: 0px;
     top: 3px;
 }
@@ -503,7 +495,7 @@ footer {
     width: 100%;
     padding: 20px;
     font-family: 'Times New Roman', Times, serif;
-    background-color: red;
+    background-color: var(--fourth-color);
     color: white;
     text-align: center;
 }
