@@ -1,20 +1,26 @@
+:root {
+    --primary-color: rgb(100, 159, 204);
+    --secondary-color: rgb(212, 149, 83);
+    --tertiary-color: rgb(158, 158, 158);
+}
+
 /* Body */
 body {
-    background: white;
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1;
-    background: rgba(128, 128, 128, 0.537);
+    background: var(--tertiary-color);
 }
 
 /* Header */
 header {
-    background-color:red;
-    color:white;
-    background-size: cover;
-    padding: 15px 390px 15px;
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px rgb(60, 60, 60);
+    background-image: url(../images/header-bg.jpg);
+    background-size: cover; 
+    padding: 20px 35px;
     border-bottom: solid black 3px;
 }
 
@@ -24,7 +30,6 @@ html, body {
     height: 100%;
 }
 
-<<<<<<< HEAD
 .pure-menu-heading {
     color: black;
     display: flex;
