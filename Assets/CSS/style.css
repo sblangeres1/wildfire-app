@@ -37,7 +37,7 @@ header {
 }
 
 /* BACK TO ORIGINAL VERTICAL MENU */
-Add transition to containers so they can push in and out.
+/* Add transition to containers so they can push in and out. */
 #layout, #menu, .menu-link {
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
