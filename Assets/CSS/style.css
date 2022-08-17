@@ -187,6 +187,11 @@ main {
 padding: 0px 300px;
 }
 
+#fireMap {
+    height: 100vh;
+    width: 100vw;
+}
+
 .wrap-sec1,
 .wrap-sec2,
 .wrap-sec3,
@@ -286,7 +291,7 @@ padding: 0px 300px;
   }
 
 /* BACK TO ORIGINAL VERTICAL MENU */
-Add transition to containers so they can push in and out.
+/*Add transition to containers so they can push in and out.*/
 #layout, #menu, .menu-link {
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
