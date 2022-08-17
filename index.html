@@ -15,30 +15,25 @@
 <body>
     <section id="layout">
         <header>
-            <h1>California Wildfire Response Mobile App</h1>
-        </header>
-        <!-- Menu toggle -->
-        <a href="#menu" id="menuLink" class="menu-link">
-            <!-- Hamburger icon -->
-            <span></span>
-        </a>
-        <!-- Vertical menu -->    
-        <div id="menu">
-            <div class="pure-menu">
-                <div class="corner-img">
-                    <img width="100" height="100" src="./assets/Images/fire.png" alt="fire flame"/>
-                </div>
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="#sec-1" class="pure-menu-link">Is there a fire?</a></li>
-                    <li class="pure-menu-item"><a href="#sec-2" class="pure-menu-link">Fire weather</a></li>
-                    <li class="pure-menu-item"><a href="#sec-2" class="pure-menu-link">Fire weather</a></li>
-                    <li class="pure-menu-item"><a href="#sec-3" class="pure-menu-link">Are you ready?</a></li>
-                    <li class="pure-menu-item"><a href="#sec-4" class="pure-menu-link">Home ready?</a></li>
-                    <li class="pure-menu-item"><a href="#sec-5" class="pure-menu-link">Your FSC</a></li>
-                    <li class="pure-menu-item"><a href="#sec-6" class="pure-menu-link">Useful Links</a></li>
-                </ul>
-            </div>
+            <h1>California Wildfire Response Mobile App</h1>        
+        <!-- Sidebar Menu -->
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+        <div id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+                <li><a href="#sec-1" class="pure-menu-link">Is there a fire?</a></li>
+                <li><a href="#sec-2" class="pure-menu-link">Fire weather</a></li>
+                <li><a href="#sec-3" class="pure-menu-link">You ready?</a></li>
+                <li><a href="#sec-4" class="pure-menu-link">Home ready?</a></li>
+                <li><a href="#sec-5" class="pure-menu-link">Your FSC</a></li>
+                <li><a href="#sec-6" class="pure-menu-link">Useful Links</a></li>
+            </ul>
         </div>
+        </header>
     
 
     <!-- Main Content -->
@@ -98,6 +93,9 @@
                                     <label for="checkbox_5">Item Five</label>
                                 </li>
                             </ul>
+                        </div>
+                        <div>
+                            <textarea class="form-inline list-item"></textarea>
                         </div>
                     </div>
                 </div>
