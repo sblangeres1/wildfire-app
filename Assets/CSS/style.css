@@ -38,10 +38,7 @@ header {
 
 /* BACK TO ORIGINAL VERTICAL MENU */
 Add transition to containers so they can push in and out.
-*/
-#layout,
-#menu,
-.menu-link {
+#layout, #menu, .menu-link {
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
@@ -49,22 +46,21 @@ Add transition to containers so they can push in and out.
     transition: all 0.2s ease-out;
 }
 
-/*
-This is the parent `<div>` that contains the menu and the content area.
-*/
+/* Parent `<div>` that contains the menu and the content area. */
 #layout {
     position: relative;
     left: 0;
     padding-left: 0;
 }
-    #layout.active #menu {
-        left: 150px;
-        width: 150px;
-    }
 
-    #layout.active .menu-link {
-        left: 150px;
-    } 
+#layout.active #menu {
+    left: 150px;
+    width: 150px;
+}
+
+#layout.active .menu-link {
+    left: 150px;
+} 
 
 .corner-img {
     display: flex;
@@ -76,19 +72,6 @@ This is the parent `<div>` that contains the menu and the content area.
 /* MAIN CONTENT */
 main {
 padding: 0px 300px;
-}
-
-#subtitle {
-    line-height: 1;
-    font-size: 14px; 
-    color: black;
-    font-weight: bold;
-    text-shadow: none;
-    text-decoration: none; 
-}
-
-a:visited {
-    text-decoration: none;
 }
 
 .wrap-sec1,
@@ -248,10 +231,8 @@ footer {
 }
 
 
-/*
-The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
-appears on the left side of the page.
-*/
+/* The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+appears on the left side of the page. */
 
 #menu {
     margin-left: -150px; /* "#menu" width */
@@ -266,9 +247,15 @@ appears on the left side of the page.
 }
 
 .pure-menu-link {
-    color: whitesmoke;
-    font-weight: bold;
+    color: var(--tertiary-color);
+    text-shadow: 1px 1px rgba(255, 255, 255, .1);
     border-radius: 3px;
+}
+
+.pure-menu-link:hover, .pure-menu-link:focus {
+    color: black; 
+    background: var(--secondary-color);
+    text-shadow: rgba(255, 255, 255, .5);
 }
 
 /*
@@ -319,12 +306,9 @@ small screens.
             margin-top: 0.6em;
         }
 
-
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
-/*
-Hides the menu at `48em`, but modify this based on your app's needs.
-*/
+/*Hides the menu at `48em`.*/
 @media (min-width: 48em) {
 
     .header,
@@ -353,8 +337,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 
 @media (max-width: 48em) {
-    /* Only apply this when the window is small. Otherwise, the following
-    case results in extra padding on the left:
+/* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
         * Make the window small.
         * Tap the menu to trigger the active state.
         * Make the window large again.
@@ -363,4 +346,22 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         position: relative;
         left: 150px;
     }
+
+    @media only screen and (max-width: 600px) {
+        #menu{width: 110px; display: block; display: none; margin: 0; justify-content: center;}
+    }
+}
+
+/* OTHER THINGS */
+#subtitle {
+    line-height: 1;
+    font-size: 14px; 
+    color: black;
+    font-weight: bold;
+    text-shadow: none;
+    text-decoration: none; 
+}
+        
+a:visited {
+    text-decoration: none;
 }
