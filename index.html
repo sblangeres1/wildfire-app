@@ -17,28 +17,28 @@
         <header>
             <h1>California Wildfire Response Mobile App</h1>
         </header>
-        
-        <!-- Sidebar Menu -->
-    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-    <label for="openSidebarMenu" class="sidebarIconToggle">
-        <div class="spinner diagonal part-1"></div>
-        <div class="spinner horizontal"></div>
-        <div class="spinner diagonal part-2"></div>
-    </label>
-    <div id="sidebarMenu">
-        <ul class="sidebarMenuInner">
-            <li><a href="#sec-1" class="pure-menu-link">Is there a fire?</a></li>
-            <li><a href="#sec-2" class="pure-menu-link">Fire weather</a></li>
-            <li><a href="#sec-3" class="pure-menu-link">Are you ready?</a></li>
-            <li><a href="#sec-4" class="pure-menu-link">Home ready?</a></li>
-            <li><a href="#sec-5" class="pure-menu-link">Your FSC</a></li>
-            <li><a href="#sec-6" class="pure-menu-link">Useful Links</a></li>
-        </ul>
-    </div>
-    
 
-    <!-- Main Content -->
-    <!-- Section 1-2: Incident Map -->
+        <!-- Sidebar Menu -->
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+        <div id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+                <li><a href="#sec-1" class="pure-menu-link">Is there a fire?</a></li>
+                <li><a href="#sec-2" class="pure-menu-link">Fire weather</a></li>
+                <li><a href="#sec-3" class="pure-menu-link">Are you ready?</a></li>
+                <li><a href="#sec-4" class="pure-menu-link">Home ready?</a></li>
+                <li><a href="#sec-5" class="pure-menu-link">Your FSC</a></li>
+                <li><a href="#sec-6" class="pure-menu-link">Useful Links</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Main Content -->
+        <!-- Section 1-2: Incident Map -->
         <div class="pure-g">
             <div class="wrap-sec1 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
                 <input id="sec1" class="toggle" type="checkbox">
@@ -71,7 +71,8 @@
                 <input id="sec3" class="toggle" type="checkbox">
                 <label for="sec3" class="lbl-toggle">Are you ready for a wildfire?
                     <p id="subtitle">
-                        <a href="https://www.readyforwildfire.org/prepare-for-wildfire/get-set/wildfire-action-plan/" target="blank">Cal Fire Tips</a>
+                        <a href="https://www.readyforwildfire.org/prepare-for-wildfire/get-set/wildfire-action-plan/"
+                            target="blank">Cal Fire Tips</a>
                     </p>
                 </label>
                 <div class="sec3-content">
@@ -97,19 +98,21 @@
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
+        </div>
 
-            <!-- Section 4: Home ready list -->
-            <div class="pure-g">
-                <div class="wrap-sec1 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                    <input id="sec4" class="toggle" type="checkbox">
-                    <label for="sec4" class="lbl-toggle">Is your home ready for a wildfire?
-                        <p id="subtitle">
-                            <a href="https://www.readyforwildfire.org/prepare-for-wildfire/get-ready/hardening-your-home/" target="blank">Cal Fire Tips</a>
-                        </p>
-                    </label>
-                    <div class="sec4-content">
-                        <div class="content-inner">
+        <!-- Section 4: Home ready list -->
+        <div class="pure-g">
+            <div class="wrap-sec4 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <input id="sec4" class="toggle" type="checkbox">
+                <label for="sec4" class="lbl-toggle">Is your home ready for a wildfire?
+                    <p id="subtitle">
+                        <a href="https://www.readyforwildfire.org/prepare-for-wildfire/get-ready/hardening-your-home/"
+                            target="blank">Cal Fire Tips</a>
+                    </p>
+                </label>
+                <div class="sec4-content">
+                    <div class="content-inner">
                         <div class="checkbox2">
                             <ul>
                                 <li><input type="checkbox" id="checkbox2_1">
@@ -129,51 +132,58 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Section 5-6: Links, Fire Safe Council -->
+            <div class="pure-g">
+                <div class="wrap-sec5 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                    <input id="sec5" class="toggle" type="checkbox">
+                    <label for="sec5" class="lbl-toggle">Find your Fire Safe Council</label>
+                    <div class="sec5-content">
+                        <div class="content-inner">
+                            <p>
+                                Put info here
+                            </p>
                         </div>
                     </div>
-
-        <!-- Section 5-6: Links, Fire Safe Council -->
-        <div class="pure-g">
-            <div class="wrap-sec5 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                <input id="sec5" class="toggle" type="checkbox">
-                <label for="sec5" class="lbl-toggle">Find your Fire Safe Council</label>
-                <div class="sec5-content">
-                    <div class="content-inner">
-                    <p>
-                        Put info here
-                    </p>
                 </div>
-            </div>
             </div>
         </div>
 
-        <div class="wrap-sec6">
-            <input id="sec6" class="toggle" type="checkbox">
-            <label for="sec6" class="lbl-toggle">Helpful Links</label>
-            <div class="sec6-content">
-                <div class="content-inner">
-                    <p class="subtitle">Check out these useful sites.
+        <div class="pure-g">
+            <div class="wrap-sec6 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <input id="sec6" class="toggle" type="checkbox">
+                <label for="sec6" class="lbl-toggle">Helpful Links</label>
+                <div class="sec6-content">
+                    <div class="content-inner">
+                        <p class="subtitle">Check out these useful sites.
                         <ul>
                             <li>
-                                <a href="https://www.readyforwildfire.org" target="blank">Ready for Wildfire</a>
+                                <a href="https://www.readyforwildfire.org" target="blank">Ready for
+                                    Wildfire</a>
                             </li>
                             <li>
-                                <a href="https://cafiresafecouncil.org/resources/fire-safe-councils/map-of-fire-safe-councils/" target="blank">Fire Safe Council</a>
+                                <a href="https://cafiresafecouncil.org/resources/fire-safe-councils/map-of-fire-safe-councils/"
+                                    target="blank">Fire Safe Council</a>
                             </li>
                         </ul>
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <footer>
         &copy 2022 Blangeres, Queen, Stephenson, Verhulp
     </footer>
-    
-<!-- Javascript -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="./assets/script.js"></script>
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/script.js"></script>
+
 </body>
 
 </html>
