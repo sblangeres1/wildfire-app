@@ -41,6 +41,7 @@ html, body {
     transform: translateX(-180px);
     transition: transform 180ms ease-in-out;
     background: black;
+    border-radius: 7px;
 }
 
 .sidebarMenuInner li{
