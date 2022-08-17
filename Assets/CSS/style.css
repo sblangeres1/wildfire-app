@@ -40,7 +40,6 @@ header {
 .sidebarMenuInner li{
     list-style: none;
     color: white;
-    text-transform: uppercase;
     font-weight: bold;
     padding: 20px;
     cursor: pointer;
@@ -53,7 +52,6 @@ header {
 }
 .sidebarMenuInner li a{
     color: white;
-    text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
@@ -71,13 +69,14 @@ html, body {
 #sidebarMenu {
     height: 100%;
     position: fixed;
-    left: 0;
+    left: 0%;
     width: 180px;
     transform: translateX(-180px);
     transition: transform 180ms ease-in-out;
     background: black;
     opacity: 1;
     border-radius: 7px;
+    font-size: 13px;
 }
 
 .sidebarMenuInner li{
