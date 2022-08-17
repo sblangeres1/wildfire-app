@@ -1,20 +1,39 @@
+:root {
+    --primary-color: rgb(100, 159, 204);
+    --secondary-color: rgb(230, 155, 75);
+    --tertiary-color: rgb(158, 158, 158);
+    --fourth-color: rgb(176, 4, 4); 
+}
+
 /* Body */
 body {
-    background: white;
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1;
+    background: var(--tertiary-color);
+}
+
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+main {
+    width: 70%;
 }
 
 /* Header */
 header {
-    background-color:red;
-    color:white;
-    background-size: cover;
-    padding: 15px 390px 15px;
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px rgb(60, 60, 60);
+    background-image: url(../images/header-bg.jpg);
+    background-size: cover; 
+    padding: 20px 35px;
     border-bottom: solid black 3px;
+    position: sticky;
+    top: 0;
 }
 
 /* Sidebar Menu */
@@ -220,6 +239,135 @@ padding: 0px 300px;
     padding: .5rem 1rem;
   }
 
+/* BACK TO ORIGINAL VERTICAL MENU */
+Add transition to containers so they can push in and out.
+#layout, #menu, .menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/* Parent `<div>` that contains the menu and the content area. */
+#layout {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+}
+
+#layout.active #menu {
+    left: 150px;
+    width: 150px;
+}
+
+#layout.active .menu-link {
+    left: 150px;
+} 
+
+.corner-img {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    padding: 5px;
+}
+
+/* MAIN CONTENT */
+main {
+padding: 0px 300px;
+}
+
+.wrap-sec1,
+.wrap-sec2,
+.wrap-sec3,
+.wrap-sec4,
+.wrap-sec5,
+.wrap-sec6 {
+    margin-bottom: 1.2rem 0;
+    border-bottom: var(--tertiary-color) solid 6px;
+  }
+  
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  .lbl-toggle {
+    display: block;  
+    padding: 20px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: rgb(60, 60, 60) 1px 1px 1px;
+    background: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 7px;
+    border: solid black 1px;
+    transition: all 0.25s ease-out;
+  }
+  
+  .lbl-toggle:hover {
+    font-weight: bold;
+    text-shadow: none;
+    background: rgb(249, 191, 129);
+    border: solid black 3px;
+  }
+  
+  .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+  }
+  
+  .toggle:checked + .lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+  }
+  
+  .sec1-content,
+  .sec2-content, 
+  .sec3-content,
+  .sec4-content,
+  .sec5-content,
+  .sec6-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+  }
+  
+  .toggle:checked + .lbl-toggle + .sec1-content,
+  .toggle:checked + .lbl-toggle + .sec2-content,
+  .toggle:checked + .lbl-toggle + .sec3-content,
+  .toggle:checked + .lbl-toggle + .sec4-content,
+  .toggle:checked + .lbl-toggle + .sec5-content, 
+  .toggle:checked + .lbl-toggle + .sec6-content {
+    max-height: 100vh;
+  }
+  
+  .toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .sec1-content .content-inner,
+  .sec2-content .content-inner,
+  .sec3-content .content-inner, 
+  .sec4-content .content-inner,
+  .sec5-content .content-inner,
+  .sec6-content .content-inner {
+    background: var(--primary-color);
+    border: solid black 1px;
+    border-top: none;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+  }
+
+  /* Checklist */
   /* Checklist */
   body {
     line-height: 24px;
@@ -227,24 +375,29 @@ padding: 0px 300px;
     box-sizing: border-box;
 }
 
-  .checkbox input[type="checkbox"] {
+  .checkbox input[type="checkbox"],
+  .checkbox2 input[type="checkbox"] {
     opacity: 0;
 }
 
-.checkbox label {
+.checkbox label,
+.checkbox2 label {
     position: relative;
     display: inline-block;
     padding-left: 22px;
 }
 
 .checkbox label::before,
-.checkbox label::after {
+.checkbox label::after,
+.checkbox2 label::before,
+.checkbox2 label::after {
     position: absolute;
     content: " ";
     display: inline-block;
 }
 
-.checkbox label::before{
+.checkbox label::before,
+.checkbox2 label::before{
     height: 16px;
     width: 16px;
     border: 1px solid red;
@@ -252,7 +405,8 @@ padding: 0px 300px;
     top: 3px;
 }
 
-.checkbox label::after {
+.checkbox label::after,
+.checkbox2 label::after {
     height: 5px;
     width: 9px;
     border-left: 2px solid;
@@ -262,15 +416,18 @@ padding: 0px 300px;
     top: 7px;
 }
 
-.checkbox input[type="checkbox"] + label::after {
+.checkbox input[type="checkbox"] + label::after,
+.checkbox2 input[type="checkbox"] + label::after {
     content: none;
 }
 
-.checkbox input[type="checkbox"]:checked + label::after {
+.checkbox input[type="checkbox"]:checked + label::after,
+.checkbox2 input[type="checkbox"]:checked + label::after {
     content: " ";
 }
 
-.checkbox input[type="checkbox"]:focus + label::before {
+.checkbox input[type="checkbox"]:focus + label::before,
+.checkbox2 input[type="checkbox"]:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
 
 }
@@ -281,7 +438,143 @@ footer {
     width: 100%;
     padding: 20px;
     font-family: 'Times New Roman', Times, serif;
-    background-color: red;
+    background-color: var(--fourth-color);
     color: white;
     text-align: center;
+}
+
+
+/* The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+appears on the left side of the page. */
+
+#menu {
+    margin-left: -150px; /* "#menu" width */
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    background: #191818; 
+    overflow-y: auto;
+}
+
+.pure-menu-link {
+    color: var(--tertiary-color);
+    text-shadow: 1px 1px rgba(255, 255, 255, .1);
+    border-radius: 3px;
+}
+
+.pure-menu-link:hover, .pure-menu-link:focus {
+    color: black; 
+    background: var(--secondary-color);
+    text-shadow: rgba(255, 255, 255, .5);
+}
+
+/*
+`.menu-link` represents the responsive menu toggle that shows/hides on
+small screens.
+*/
+.menu-link {
+    position: fixed;
+    display: block; /* show this only on small screens */
+    top: 0;
+    left: 0; /* "#menu width" */
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    font-size: 10px; /* change this value to increase/decrease button size */
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 2.1em 1.6em;
+}
+
+    .menu-link:hover,
+    .menu-link:focus {
+        background: #000;
+    }
+
+    .menu-link span {
+        position: relative;
+        display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+        background-color: #fff;
+        pointer-events: none;
+        width: 100%;
+        height: 0.2em;
+    }
+
+        .menu-link span:before,
+        .menu-link span:after {
+            position: absolute;
+            margin-top: -0.6em;
+            content: " ";
+        }
+
+        .menu-link span:after {
+            margin-top: 0.6em;
+        }
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*Hides the menu at `48em`.*/
+@media (min-width: 48em) {
+
+    .header,
+    .content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #layout {
+        padding-left: 150px; /* left col width "#menu" */
+        left: 0;
+    }
+    #menu {
+        left: 150px;
+    }
+
+    .menu-link {
+        position: fixed;
+        left: 150px;
+        display: none;
+    }
+
+    #layout.active .menu-link {
+        left: 150px;
+    }
+}
+
+@media (max-width: 48em) {
+/* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+    #layout.active {
+        position: relative;
+        left: 150px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #menu{width: 110px; display: block; display: none; margin: 0; justify-content: center;}
+    }
+}
+
+/* OTHER THINGS */
+#subtitle {
+    line-height: 1;
+    font-size: 14px; 
+    color: black;
+    font-weight: bold;
+    text-shadow: none;
+    text-decoration: none; 
+}
+        
+a:visited {
+    text-decoration: none;
 }
