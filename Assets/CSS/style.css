@@ -26,6 +26,16 @@ header {
     border-bottom: solid black 3px;
     position: sticky;
     top: 0;
+    display: flex;
+}
+
+.titles {
+    flex: 1 70%;
+}
+.weather-api-box {
+    flex: 2 30%;
+    background-color: var(--tertiary-color);
+    border: black solid 1px;
 }
 
 /* Sidebar Menu */
