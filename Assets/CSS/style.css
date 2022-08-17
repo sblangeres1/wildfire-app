@@ -21,6 +21,7 @@ header {
     text-shadow: 1px 1px 2px rgb(60, 60, 60);
     background-image: url(../images/header-bg.jpg);
     background-size: cover; 
+    opacity: 1;
     padding: 20px 35px;
     border-bottom: solid black 3px;
     position: sticky;
@@ -41,6 +42,7 @@ html, body {
     transform: translateX(-180px);
     transition: transform 180ms ease-in-out;
     background: black;
+    opacity: 1;
     border-radius: 7px;
 }
 
@@ -66,6 +68,13 @@ html, body {
     text-shadow: rgba(255, 255, 255, .5);
     text-decoration: none;
 }
+/*other menu*/
+.pure-menu-link {
+    color: var(--tertiary-color);
+    text-shadow: 1px 1px rgba(255, 255, 255, .1);
+    border-radius: 3px;
+}
+
 .pure-menu-link:hover, .pure-menu-link:focus {
     color: black; 
     background: var(--secondary-color);
@@ -302,32 +311,7 @@ footer {
 }
 
 
-/* The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
-appears on the left side of the page. */
 
-#menu {
-    margin-left: -150px; /* "#menu" width */
-    width: 150px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818; 
-    overflow-y: auto;
-}
-
-.pure-menu-link {
-    color: var(--tertiary-color);
-    text-shadow: 1px 1px rgba(255, 255, 255, .1);
-    border-radius: 3px;
-}
-
-.pure-menu-link:hover, .pure-menu-link:focus {
-    color: black; 
-    background: var(--secondary-color);
-    text-shadow: rgba(255, 255, 255, .5);
-}
 
 /*
 `.menu-link` represents the responsive menu toggle that shows/hides on
