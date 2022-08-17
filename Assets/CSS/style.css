@@ -30,26 +30,11 @@ header {
     text-shadow: 1px 1px 2px rgb(60, 60, 60);
     background-image: url(../images/header-bg.jpg);
     background-size: cover; 
+    opacity: 1;
     padding: 20px 35px;
     border-bottom: solid black 3px;
     position: sticky;
     top: 0;
-}
-
-/* Sidebar Menu */
-html, body {
-    overflow-x: hidden;
-    height: 100%;
-}
-
-#sidebarMenu {
-    height: 100%;
-    position: fixed;
-    left: 0;
-    width: 250px;
-    transform: translateX(-250px);
-    transition: transform 250ms ease-in-out;
-    background: red;
 }
 
 .sidebarMenuInner li{
@@ -67,12 +52,69 @@ html, body {
     color: rgba(255, 255, 255, 0.50);
 }
 .sidebarMenuInner li a{
-    color: #fff;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
 }
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+/* Sidebar Menu */
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 180px;
+    transform: translateX(-180px);
+    transition: transform 180ms ease-in-out;
+    background: black;
+    opacity: 1;
+    border-radius: 7px;
+}
+
+.sidebarMenuInner li{
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    list-style: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 10px;
+}
+.sidebarMenuInner li span{
+    font-size: 14px;
+    color: var(--tertiary-color);
+    text-shadow: 1px 1px rgba(255, 255, 255, .1);
+    border-radius: 3px;
+}
+.sidebarMenuInner li a{
+    color: var(--tertiary-color);
+    cursor: pointer;
+    border-radius: 3px;
+    text-shadow: rgba(255, 255, 255, .5);
+    text-decoration: none;
+}
+/*other menu*/
+.pure-menu-link {
+    color: var(--tertiary-color);
+    text-shadow: 1px 1px rgba(255, 255, 255, .1);
+    border-radius: 3px;
+}
+
+.pure-menu-link:hover, .pure-menu-link:focus {
+    color: black; 
+    background: var(--secondary-color);
+    text-shadow: rgba(255, 255, 255, .5);
+}
+
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
 }
@@ -90,8 +132,8 @@ input[type=checkbox] {
     z-index: 99;
     height: 100%;
     width: 100%;
-    top: 22px;
-    left: 15px;
+    top: 15px;
+    left: 10px;
     height: 22px;
     width: 22px;
 }
@@ -141,7 +183,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-top: -9px;
 }
 
-/* Main Section */
+/* MAIN CONTENT */
 main {
 padding: 0px 300px;
 }
@@ -153,47 +195,43 @@ padding: 0px 300px;
 .wrap-sec5,
 .wrap-sec6 {
     margin-bottom: 1.2rem 0;
+    border-bottom: var(--tertiary-color) solid 6px;
   }
   
   input[type='checkbox'] {
     display: none;
   }
-  
+
   .lbl-toggle {
-    display: block;
-  
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: center;
-  
+    display: block;  
     padding: 20px;
-  
-    color: white;
-    background: orange;
-  
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: rgb(60, 60, 60) 1px 1px 1px;
+    background: var(--secondary-color);
     cursor: pointer;
-  
     border-radius: 7px;
+    border: solid black 1px;
     transition: all 0.25s ease-out;
   }
   
   .lbl-toggle:hover {
-    color: red;
+    font-weight: bold;
+    text-shadow: none;
+    background: rgb(249, 191, 129);
+    border: solid black 3px;
   }
   
   .lbl-toggle::before {
     content: ' ';
     display: inline-block;
-  
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-left: 5px solid currentColor;
     vertical-align: middle;
     margin-right: .7rem;
     transform: translateY(-2px);
-  
     transition: transform .2s ease-out;
   }
   
@@ -232,8 +270,9 @@ padding: 0px 300px;
   .sec4-content .content-inner,
   .sec5-content .content-inner,
   .sec6-content .content-inner {
-    background: lightgray;
-    border-bottom: 1px solid rgba(250, 224, 66, .45);
+    background: var(--primary-color);
+    border: solid black 1px;
+    border-top: none;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
     padding: .5rem 1rem;
@@ -412,7 +451,7 @@ padding: 0px 300px;
 .checkbox3 label::before {
     height: 16px;
     width: 16px;
-    border: 1px solid red;
+    border: 1px solid var(--fourth-color);
     left: 0px;
     top: 3px;
 }
@@ -460,32 +499,6 @@ footer {
 }
 
 
-/* The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
-appears on the left side of the page. */
-
-#menu {
-    margin-left: -150px; /* "#menu" width */
-    width: 150px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818; 
-    overflow-y: auto;
-}
-
-.pure-menu-link {
-    color: var(--tertiary-color);
-    text-shadow: 1px 1px rgba(255, 255, 255, .1);
-    border-radius: 3px;
-}
-
-.pure-menu-link:hover, .pure-menu-link:focus {
-    color: black; 
-    background: var(--secondary-color);
-    text-shadow: rgba(255, 255, 255, .5);
-}
 
 /*
 `.menu-link` represents the responsive menu toggle that shows/hides on
@@ -547,7 +560,6 @@ small screens.
     }
 
     #layout {
-        padding-left: 150px; /* left col width "#menu" */
         left: 0;
     }
     #menu {
