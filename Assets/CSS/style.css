@@ -29,6 +29,9 @@ header {
     display: flex;
 }
 
+h2 {
+    color: var(--tertiary-color);
+}
 .titles {
     flex: 1 70%;
 }
@@ -53,7 +56,6 @@ html, body {
     transition: transform 180ms ease-in-out;
     background: black;
     opacity: 1;
-    border-radius: 7px;
 }
 
 .sidebarMenuInner li{
@@ -65,24 +67,14 @@ html, body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     padding: 10px;
 }
-.sidebarMenuInner li span{
-    font-size: 14px;
-    color: var(--tertiary-color);
-    text-shadow: 1px 1px rgba(255, 255, 255, .1);
-    border-radius: 3px;
-}
-.sidebarMenuInner li a{
-    color: var(--tertiary-color);
-    cursor: pointer;
-    border-radius: 3px;
-    text-shadow: rgba(255, 255, 255, .5);
-    text-decoration: none;
-}
+
 /*other menu*/
 .pure-menu-link {
+    margin-left: -30px;
+    font-size: 15px;
     color: var(--tertiary-color);
+    font-weight: bold;
     text-shadow: 1px 1px rgba(255, 255, 255, .1);
-    border-radius: 3px;
 }
 
 .pure-menu-link:hover, .pure-menu-link:focus {

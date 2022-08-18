@@ -20,7 +20,7 @@ This app was built collaboratively by Scott Blangeres (JavaScript, API), Abigail
 1. Tutorials and samples about grids and menus in Pure.css by [PURE](https://purecss.io/)
 2. Article about Implementing a Pure CSS Collapsible by [Community](https://www.digitalocean.com/community/tutorials/css-collapsible)
 3. Article about [Checklists](https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3)
-4. Fire icon and image from [Flaticon.](https://flaticon.com) 
+4. Fire, link, pin, exit, thumbs, wind, home icons from [Flaticon.](https://flaticon.com) 
 5. Header background from image at [Nature Conservancy.](https://www.nature.org/en-us/about-us/where-we-work/united-states/california/stories-in-california/californias-wildfire-future/)
 6. Tutorials on Pure.css menus and grids at [JavaTPoint.com.](https://www.javatpoint.com/pure-css-tutorial)
 7. One Call Api 1.0 at [OpenWeather.](https://openweathermap.org/api/one-call-api)
