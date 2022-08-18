@@ -15,6 +15,15 @@ body {
     background: var(--tertiary-color);
 }
 
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+main {
+    width: 70%;
+}
+
 /* Header */
 header {
     color: whitesmoke;
@@ -32,14 +41,42 @@ header {
 h2 {
     color: var(--tertiary-color);
 }
+
 .titles {
     flex: 1 70%;
 }
+
 .weather-api-box {
     flex: 2 30%;
     background-color: var(--tertiary-color);
     border: black solid 2px;
     border-radius: 3px;
+}
+
+.sidebarMenuInner li{
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
 }
 
 /* Sidebar Menu */
@@ -51,12 +88,14 @@ html, body {
 #sidebarMenu {
     height: 100%;
     position: fixed;
-    left: 0;
+    left: 0%;
     width: 180px;
     transform: translateX(-180px);
     transition: transform 180ms ease-in-out;
     background: black;
     opacity: 1;
+    border-radius: 7px;
+    font-size: 13px;
 }
 
 .sidebarMenuInner li{
@@ -172,7 +211,6 @@ padding: 0px 300px;
     border-bottom: var(--tertiary-color) solid 6px;
   }
 
-  
   input[type='checkbox'] {
     display: none;
   }
@@ -259,6 +297,143 @@ padding: 0px 300px;
     padding: .5rem 1rem;
   }
 
+/* BACK TO ORIGINAL VERTICAL MENU */
+Add transition to containers so they can push in and out.
+#layout, #menu, .menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/* Parent `<div>` that contains the menu and the content area. */
+#layout {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+}
+
+#layout.active #menu {
+    left: 150px;
+    width: 150px;
+}
+
+#layout.active .menu-link {
+    left: 150px;
+} 
+
+.corner-img {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    padding: 5px;
+}
+
+/* MAIN CONTENT */
+main {
+padding: 0px 300px;
+}
+
+.wrap-sec1,
+.wrap-sec2,
+.wrap-sec3,
+.wrap-sec4,
+.wrap-sec5,
+.wrap-sec6,
+.wrap-sec7,
+.wrap-sec8 {
+    margin-bottom: 1.2rem 0;
+    border-bottom: var(--tertiary-color) solid 6px;
+  }
+  
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  .lbl-toggle {
+    display: block;  
+    padding: 20px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: rgb(60, 60, 60) 1px 1px 1px;
+    background: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 7px;
+    border: solid black 1px;
+    transition: all 0.25s ease-out;
+  }
+  
+  .lbl-toggle:hover {
+    font-weight: bold;
+    text-shadow: none;
+    background: rgb(249, 191, 129);
+    border: solid black 3px;
+  }
+  
+  .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+  }
+  
+  .toggle:checked + .lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+  }
+  
+  .sec1-content,
+  .sec2-content, 
+  .sec3-content,
+  .sec4-content,
+  .sec5-content,
+  .sec6-content,
+  .sec7-content,
+  .sec8-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+  }
+  
+  .toggle:checked + .lbl-toggle + .sec1-content,
+  .toggle:checked + .lbl-toggle + .sec2-content,
+  .toggle:checked + .lbl-toggle + .sec3-content,
+  .toggle:checked + .lbl-toggle + .sec4-content,
+  .toggle:checked + .lbl-toggle + .sec5-content, 
+  .toggle:checked + .lbl-toggle + .sec6-content,
+  .toggle:checked + .lbl-toggle + .sec7-content,
+  .toggle:checked + .lbl-toggle + .sec8-content {
+    max-height: 100vh;
+  }
+  
+  .toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .sec1-content .content-inner,
+  .sec2-content .content-inner,
+  .sec3-content .content-inner, 
+  .sec4-content .content-inner,
+  .sec5-content .content-inner,
+  .sec6-content .content-inner,
+  .sec7-content .content-inner,
+  .sec8-content .content-inner {
+
+    background: var(--primary-color);
+    border: solid black 1px;
+    border-top: none;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+  }
+
   /* Checklist */
   body {
     line-height: 24px;
@@ -266,24 +441,34 @@ padding: 0px 300px;
     box-sizing: border-box;
 }
 
-  .checkbox input[type="checkbox"] {
+  .checkbox input[type="checkbox"],
+  .checkbox2 input[type="checkbox"],
+  .checkbox3 input[type="checkbox"] {
     opacity: 0;
 }
 
-.checkbox label {
+.checkbox label,
+.checkbox2 label,
+.checkbox3 label {
     position: relative;
     display: inline-block;
     padding-left: 22px;
 }
 
 .checkbox label::before,
-.checkbox label::after {
+.checkbox label::after,
+.checkbox2 label::before,
+.checkbox2 label::after,
+.checkbox3 label::before,
+.checkbox3 label::after {
     position: absolute;
     content: " ";
     display: inline-block;
 }
 
-.checkbox label::before{
+.checkbox label::before,
+.checkbox2 label::before,
+.checkbox3 label::before {
     height: 16px;
     width: 16px;
     border: 1px solid var(--fourth-color);
@@ -291,7 +476,9 @@ padding: 0px 300px;
     top: 3px;
 }
 
-.checkbox label::after {
+.checkbox label::after,
+.checkbox2 label::after,
+.checkbox3 label::after {
     height: 5px;
     width: 9px;
     border-left: 2px solid;
@@ -301,15 +488,21 @@ padding: 0px 300px;
     top: 7px;
 }
 
-.checkbox input[type="checkbox"] + label::after {
+.checkbox input[type="checkbox"] + label::after,
+.checkbox2 input[type="checkbox"] + label::after,
+.checkbox3 input[type="checkbox"] + label::after {
     content: none;
 }
 
-.checkbox input[type="checkbox"]:checked + label::after {
+.checkbox input[type="checkbox"]:checked + label::after,
+.checkbox2 input[type="checkbox"]:checked + label::after,
+.checkbox3 input[type="checkbox"]:checked + label::after {
     content: " ";
 }
 
-.checkbox input[type="checkbox"]:focus + label::before {
+.checkbox input[type="checkbox"]:focus + label::before,
+.checkbox2 input[type="checkbox"]:focus + label::before,
+.checkbox3 input[type="checkbox"]:focus + label::before{
     outline: rgb(59, 153, 252) auto 5px;
 
 }
@@ -324,7 +517,6 @@ footer {
     color: white;
     text-align: center;
 }
-
 
 
 
