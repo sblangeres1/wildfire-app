@@ -22,23 +22,26 @@
             <div class="weather-api-box"></div>
         </header>     
         <!-- Sidebar Menu -->
-        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-        <label for="openSidebarMenu" class="sidebarIconToggle">
-            <div class="spinner diagonal part-1"></div>
-            <div class="spinner horizontal"></div>
-            <div class="spinner diagonal part-2"></div>
-        </label>
-        <div id="sidebarMenu">
-            <ul class="sidebarMenuInner">
-                <li><a href="#sec-1" class="pure-menu-link">Is there a fire?</a></li>
-                <li><a href="#sec-2" class="pure-menu-link">Fire weather</a></li>
-                <li><a href="#sec-3" class="pure-menu-link">You ready?</a></li>
-                <li><a href="#sec-4" class="pure-menu-link">Home ready?</a></li>
-                <li><a href="#sec-5" class="pure-menu-link">Your FSC</a></li>
-                <li><a href="#sec-6" class="pure-menu-link">Useful Links</a></li>
-            </ul>
+        <div>
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <div id="sidebarMenu">
+                <ul class="sidebarMenuInner">
+                    <li><a href="#sec1" class="pure-menu-link">Is there a fire?</a></li>
+                    <li><a href="#sec2" class="pure-menu-link">Fire weather</a></li>
+                    <li><a href="#sec3" class="pure-menu-link">Main Essentials</a></li>
+                    <li><a href="#sec4" class="pure-menu-link">You Prepared?</a></li>
+                    <li><a href="#sec5" class="pure-menu-link">House Prepared?</a></li>
+                    <li><a href="#sec6" class="pure-menu-link">Six P's</a></li>
+                    <li><a href="#sec7" class="pure-menu-link">Your FSC</a></li>
+                    <li><a href="#sec8" class="pure-menu-link">Useful Links</a></li>
+                </ul>
+            </div>
         </div>
-        </header>
     
 
     <!-- Main Content -->
@@ -69,69 +72,92 @@
             </div>
         </div>
 
-        <!-- Section 3: Are you ready list -->
+        <!-- Section 3: Essentials list -->
         <div class="pure-g">
-            <div class="wrap-sec3 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+            <div class="wrap-sec3 pure-u-1">
                 <input id="sec3" class="toggle" type="checkbox">
-                <label for="sec3" class="lbl-toggle">Are you ready for a wildfire?
-                    <p id="subtitle">
-                        <a href="https://www.readyforwildfire.org/prepare-for-wildfire/get-set/wildfire-action-plan/" target="blank">Cal Fire Tips</a>
-                    </p>
-                </label>
+                <label for="sec3" class="lbl-toggle">Do you have your emergency supply kit?</label>
                 <div class="sec3-content">
                     <div class="content-inner">
                         <div class="checkbox">
                             <ul>
                                 <li><input type="checkbox" id="checkbox_1">
-                                    <label for="checkbox_1">Item One</label>
+                                    <label for="checkbox_1"> Three-day supply of non-perishable food and three gallons
+                                        of water per person</label>
                                 </li>
                                 <li><input type="checkbox" id="checkbox_2">
-                                    <label for="checkbox_2">Item Two</label>
+                                    <label for="checkbox_2">Map marked with at least two evacuation routes</label>
                                 </li>
                                 <li><input type="checkbox" id="checkbox_3">
-                                    <label for="checkbox_3">Item Three</label>
+                                    <label for="checkbox_3">Prescriptions or special medications</label>
                                 </li>
                                 <li><input type="checkbox" id="checkbox_4">
-                                    <label for="checkbox_4">Item Four</label>
+                                    <label for="checkbox_4">Change of clothing and closed-toe shoes</label>
                                 </li>
                                 <li><input type="checkbox" id="checkbox_5">
-                                    <label for="checkbox_5">Item Five</label>
+                                    <label for="checkbox_5">Extra eyeglasses or contact lenses</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox_6">
+                                    <label for="checkbox_6">An extra set of car keys, credit cards, and cash</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox_7">
+                                    <label for="checkbox_7">First aid kit</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox_8">
+                                    <label for="checkbox_8">Flashlight</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox_9">
+                                    <label for="checkbox_9">Battery-powered radio and extra batteries</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox_10">
+                                    <label for="checkbox_10">Sanitation supplies</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox_11">
+                                    <label for="checkbox_11">Copies of important documents
+                                        (e.g., birth certificates, passports, etc.)</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox_12">
+                                    <label for="checkbox_12">Don’t forget food and water for your pets!</label>
                                 </li>
                             </ul>
-                        </div>
-                        <div>
-                            <textarea class="form-inline list-item"></textarea>
                         </div>
                     </div>
                 </div>
             </div>    
 
-            <!-- Section 4: Home ready list -->
-            <div class="wrap-sec4 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+            <!-- Section 4: Are you prepared list -->
+            <div class="wrap-sec4 pure-u-1">
                 <input id="sec4" class="toggle" type="checkbox">
-                <label for="sec4" class="lbl-toggle">Is your home ready for a wildfire?
-                    <p id="subtitle">
-                        <a href="https://www.readyforwildfire.org/prepare-for-wildfire/get-ready/hardening-your-home/" target="blank">Cal Fire Tips</a>
-                    </p>
-                </label>
+                <label for="sec4" class="lbl-toggle">Are you prepared?</label>
                 <div class="sec4-content">
                     <div class="content-inner">
                         <div class="checkbox">
                             <ul>
-                                <li><input type="checkbox" id="checkbox_1">
-                                    <label for="checkbox_1">Item One</label>
+                                <li><input type="checkbox" id="checkbox2_1">
+                                    <label for="checkbox2_1">Have fire extinguishers on hand and train your family how
+                                        to use them (check expiration dates regularly)</label>
                                 </li>
-                                <li><input type="checkbox" id="checkbox_2">
-                                    <label for="checkbox_2">Item Two</label>
+                                <li><input type="checkbox" id="checkbox2_2">
+                                    <label for="checkbox2_2">
+                                        Ensure that your family knows where your gas, electric, and water main shut-off
+                                        controls are located and how to safely shut them down in an emergency.</label>
                                 </li>
-                                <li><input type="checkbox" id="checkbox_3">
-                                    <label for="checkbox_3">Item Three</label>
+                                <li><input type="checkbox" id="checkbox2_3">
+                                    <label for="checkbox2_3">Assemble an Emergency Supply Kit for each person, as
+                                        recommended by the American Red Cross.</label>
                                 </li>
-                                <li><input type="checkbox" id="checkbox_4">
-                                    <label for="checkbox_4">Item Four</label>
+                                <li><input type="checkbox" id="checkbox2_4">
+                                    <label for="checkbox2_4">Maintain a list of emergency contact numbers posted near
+                                        your phone and in your emergency supply kit.</label>
                                 </li>
-                                <li><input type="checkbox" id="checkbox_5">
-                                    <label for="checkbox_5">Item Five</label>
+                                <li><input type="checkbox" id="checkbox2_5">
+                                    <label for="checkbox2_5">
+                                        Keep an extra Emergency Supply Kit in your car in case you cannot get to your
+                                        home because of fire or other emergency.</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox2_6">
+                                    <label for="checkbox2_6">
+                                        Have a portable radio or scanner so you can stay updated on the fire.</label>
                                 </li>
                             </ul>
                         </div>     
@@ -140,33 +166,126 @@
             </div>
         </div>
 
-        <!-- Section 5-6: Links, Fire Safe Council -->
-        <div class="wrap-sec5">
-            <input id="sec5" class="toggle" type="checkbox">
-            <label for="sec5" class="lbl-toggle">Find your Fire Safe Council</label>
-            <div class="sec5-content">
-                <div class="content-inner">
-                    <p>
-                        Put info here
-                    </p>
+
+        <!-- Section 5: Is your house prepared? -->
+        <div class="pure-g">
+            <div class="wrap-sec5 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <input id="sec5" class="toggle" type="checkbox">
+                <label for="sec5" class="lbl-toggle">Is Your House Prepared?</label>
+                <div class="sec5-content">
+                    <div class="content-inner">
+                        <div class="checkbox3">
+                            <ul>
+                                <li><input type="checkbox" id="checkbox3_1">
+                                    <label for="checkbox3_1">Clean roofs and gutters of dead leaves, debris
+                                        and pine
+                                        needles that could catch embers</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_2">
+                                    <label for="checkbox3_2">
+                                        Replace or repair any loose or missing shingles or roof tiles to
+                                        prevent ember
+                                        penetration</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_3">
+                                    <label for="checkbox3_3">Reduce embers that could pass through vents in
+                                        the eaves by
+                                        installing 1/8 inch metal mesh screening</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_4">
+                                    <label for="checkbox3_4">Clean debris from exterior attic vents and
+                                        install 1/8 inch
+                                        metal mesh screening to reduce embers</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_5">
+                                    <label for="checkbox3_5">
+                                        Repair or replace damaged or loose window screens and any broken
+                                        windows</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_6">
+                                    <label for="checkbox3_6">
+                                        Screen or box-in areas below patios and decks with wire mesh to
+                                        prevent debris
+                                        and combustible materials from accumulating</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_7">
+                                    <label for="checkbox3_7">
+                                        Move any flammable material away from wall exteriors - mulch,
+                                        flammable plants,
+                                        leaves and needles, firewood piles - anything that can burn
+                                    </label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_8">
+                                    <label for="checkbox3_8">
+                                        Remove anything stored underneath decks or porches</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="wrap-sec6">
-            <input id="sec6" class="toggle" type="checkbox">
-            <label for="sec6" class="lbl-toggle">Helpful Links</label>
-            <div class="sec6-content">
-                <div class="content-inner">
-                    <p class="subtitle">Check these useful sites.
+
+        <!-- Section 6: The Six P's -->
+        <div class="pure-g">
+            <div class="wrap-sec6 pure-u-1">
+                <input id="sec6" class="toggle" type="checkbox">
+                <label for="sec6" class="lbl-toggle">Do You Know the Six P's?</label>
+                <div class="sec6-content">
+                    <div class="content-inner">
                         <ul>
-                            <li>
-                                <a href="https://www.readyforwildfire.org" target="blank">Ready for Wildfire</a>
-                            </li>
-                            <li>
-                                <a href="https://cafiresafecouncil.org/resources/fire-safe-councils/map-of-fire-safe-councils/" target="blank">Fire Safe Council</a>
-                            </li>
+                            <li>People and Pets</li>
+                            <li>Papers, phone numbers, and important documents</li>
+                            <li>Prescriptions, vitamins, and eyeglasses</li>
+                            <li>Pictures and irreplaceable memorabilia</li>
+                            <li>Personal computer hard drive and disks</li>
+                            <li>“Plastic” (credit cards, ATM cards) and cash</li>
                         </ul>
-                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <!-- Section 7-8: Links, Fire Safe Council -->
+        <div class="pure-g">
+            <div class="wrap-sec7 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <input id="sec7" class="toggle" type="checkbox">
+                <label for="sec7" class="lbl-toggle">Find your Fire Safe Council</label>
+                <div class="sec7-content">
+                    <div class="content-inner">
+                        <p>
+                            Put info here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-sec8 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <input id="sec8" class="toggle" type="checkbox">
+                <label for="sec8" class="lbl-toggle">Helpful Links</label>
+                <div class="sec8-content">
+                    <div class="content-inner">
+                        <p class="subtitle">Check out these useful sites.
+                            <ul>
+                                <li>
+                                    <a href="https://www.readyforwildfire.org" target="blank">Ready for
+                                            Wildfire</a>
+                                </li>
+                                <li>
+                                    <a href="https://cafiresafecouncil.org/resources/fire-safe-councils/map-of-fire-safe-councils/"
+                                            target="blank">Fire Safe Council</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.readyforwildfire.org/prepare-for-wildfire/get-set/wildfire-action-plan/"
+                                            target="blank">Create Your Wildfire Action Plan</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.readyforwildfire.org/prepare-for-wildfire/get-ready/hardening-your-home/"
+                                            target="blank">Hardening Your Home</a>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
