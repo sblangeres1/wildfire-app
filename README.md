@@ -8,6 +8,7 @@
 
 ## Deployed Page
 [Screenshot](./Assets/Images/screenshot.jpg)
+
 [URL of Deployed Application](https://nverhulp.github.io/wildfire-app/)
 
 
