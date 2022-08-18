@@ -76,6 +76,8 @@ html, body {
     color: var(--tertiary-color);
     font-weight: bold;
     text-shadow: 1px 1px rgba(255, 255, 255, .1);
+    background-color: black;
+    background: radial-gradient (black, rgb(63, 63, 63));
 }
 
 .pure-menu-link:hover, .pure-menu-link:focus {
