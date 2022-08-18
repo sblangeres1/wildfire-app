@@ -35,6 +35,22 @@ header {
     border-bottom: solid black 3px;
     position: sticky;
     top: 0;
+    display: flex;
+}
+
+h2 {
+    color: var(--tertiary-color);
+}
+
+.titles {
+    flex: 1 70%;
+}
+
+.weather-api-box {
+    flex: 2 30%;
+    background-color: var(--tertiary-color);
+    border: black solid 2px;
+    border-radius: 3px;
 }
 
 .sidebarMenuInner li{
@@ -45,17 +61,20 @@ header {
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
+
 .sidebarMenuInner li span{
     display: block;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.50);
 }
+
 .sidebarMenuInner li a{
     color: white;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
 }
+
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
 }
@@ -88,30 +107,23 @@ html, body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     padding: 10px;
 }
-.sidebarMenuInner li span{
-    font-size: 14px;
-    color: var(--tertiary-color);
-    text-shadow: 1px 1px rgba(255, 255, 255, .1);
-    border-radius: 3px;
-}
-.sidebarMenuInner li a{
-    color: var(--tertiary-color);
-    cursor: pointer;
-    border-radius: 3px;
-    text-shadow: rgba(255, 255, 255, .5);
-    text-decoration: none;
-}
+
 /*other menu*/
 .pure-menu-link {
-    color: var(--tertiary-color);
+    margin-left: -30px;
+    font-size: 15px;
+    color: rgb(158, 157, 157);
+    font-weight: bold;
     text-shadow: 1px 1px rgba(255, 255, 255, .1);
-    border-radius: 3px;
+    background-color: black;
+    background: radial-gradient (rgb(63, 63, 63), black);
 }
 
 .pure-menu-link:hover, .pure-menu-link:focus {
     color: black; 
-    background: var(--secondary-color);
-    text-shadow: rgba(255, 255, 255, .5);
+    background: radial-gradient(var(--secondary-color), rgb(173, 99, 19));
+    text-shadow: rgba(52, 52, 52, 0.5);
+    border-radius: 3px;
 }
 
 input[type="checkbox"]:checked ~ #sidebarMenu {
@@ -198,7 +210,7 @@ padding: 0px 300px;
     margin-bottom: 1.2rem 0;
     border-bottom: var(--tertiary-color) solid 6px;
   }
-  
+
   input[type='checkbox'] {
     display: none;
   }
@@ -210,7 +222,7 @@ padding: 0px 300px;
     font-size: 20px;
     text-align: center;
     text-shadow: rgb(60, 60, 60) 1px 1px 1px;
-    background: var(--secondary-color);
+    background: radial-gradient(var(--secondary-color), rgb(173, 99, 19));
     cursor: pointer;
     border-radius: 7px;
     border: solid black 1px;
@@ -413,6 +425,7 @@ padding: 0px 300px;
   .sec6-content .content-inner,
   .sec7-content .content-inner,
   .sec8-content .content-inner {
+
     background: var(--primary-color);
     border: solid black 1px;
     border-top: none;
