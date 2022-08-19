@@ -2,6 +2,11 @@ var city;
 var date = new Date();
 var year = date.getYear();
 
+function yearFormat(a){
+    var yearNum = Number(a) - 1900;
+    return yearNum;
+}
+
 window.addEventListener('load', ()=> {
     let long;
     let lat;
@@ -37,13 +42,7 @@ window.addEventListener('load', ()=> {
     }
 });
 
-
-function yearFormat(a){
-    var yearNum = Number(a) - 1900;
-    return yearNum;
-}
-
-function makeMap(){
+function initMap(){
     //Getting the NASA api
     fetch("https://eonet.gsfc.nasa.gov/api/v3/events")
     .then(res => res.json())
@@ -90,4 +89,4 @@ function makeMap(){
     });
 }
  
-window.initMap = makeMap;
+window.initMap = initMap;
