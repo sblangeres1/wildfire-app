@@ -15,10 +15,15 @@
 <body>
     <section id="layout">
         <header>
-
-            <div>
+            <div class="titles">
                 <h1>California Wildfire Response Mobile App</h1>
-                <h2>Be ready</h2>
+                <!-- Local Temperature API -->
+                <div class="location-timezone" id="location">...</div>
+                <div class="temperature">
+                    <h3 class="degree" id="degrees">...</h3>
+                    <h4 class="temperature-description">...</h4>
+                </div>
+            </div>
             </div>
         </header>
 
@@ -49,9 +54,11 @@
                 <label for="fire" class="lbl-toggle">Is there a fire near you?</label>
                 <div class="fire-content">
                     <div class="content-inner">
-                        <p>
-                            Put map here
-                        </p>
+                        <div class="sec1-content">
+                            <div class="content-inner">
+                                <div id="fireMap"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,6 +74,7 @@
                         <div class="checkbox">
                             <ul>
                                 <li><input type="checkbox" id="checkbox_1">
+
                                     <label for="checkbox_1"> Three-day supply of non-perishable food and three gallons
                                         of water per person</label>
                                 </li>
@@ -289,7 +297,9 @@
 
     <!-- Javascript -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqcx1kUhjcn_O1QjgfLtn2_2tiBdiAehY&callback=initMap"></script>
+    <script src="Assets/Javascript/script.js"></script>
 
 </body>
 
