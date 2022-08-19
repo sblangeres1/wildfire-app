@@ -200,7 +200,6 @@ padding: 0px 300px;
 }
 
 .wrap-fire,
-.wrap-fire-weather,
 .wrap-main-essentials,
 .wrap-you-prepared,
 .wrap-house-prepared,
@@ -253,7 +252,6 @@ padding: 0px 300px;
   }
   
   .fire-content,
-  .fire-weather-content, 
   .main-essentials-content,
   .you-prepared-content,
   .house-prepared-content,
@@ -266,7 +264,6 @@ padding: 0px 300px;
   }
   
   .toggle:checked + .lbl-toggle + .fire-content,
-  .toggle:checked + .lbl-toggle + .fire-weather-content,
   .toggle:checked + .lbl-toggle + .main-essentials-content,
   .toggle:checked + .lbl-toggle + .you-prepared-content,
   .toggle:checked + .lbl-toggle + .house-prepared-content, 
@@ -282,7 +279,6 @@ padding: 0px 300px;
   }
   
   .fire-content .content-inner,
-  .fire-weather-content .content-inner,
   .main-essentials-content .content-inner, 
   .you-prepared-content .content-inner,
   .house-prepared-content .content-inner,
