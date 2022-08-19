@@ -53,6 +53,26 @@ h2 {
     border-radius: 3px;
 }
 
+/* Strictly For the Weather API */
+
+#location {
+    text-align: right;
+}
+.temperature {
+    text-align: right;
+}
+#temp-description {
+    text-align: right;
+}
+#degrees {
+    text-align: right;
+}
+
+#fireMap {
+    height: 500px;
+    width: 100%;
+}
+
 /* Sidebar Menu */
 html, body {
     overflow-x: hidden;
