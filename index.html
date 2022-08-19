@@ -15,7 +15,16 @@
 <body>
     <section id="layout">
         <header>
-            <h1>California Wildfire Response Mobile App</h1>
+            <div class="titles">
+                <h1>California Wildfire Response Mobile App</h1>
+                <!-- Local Temperature API -->
+                <div class="location-timezone" id="location">...</div>
+                <div class="temperature">
+                    <h3 class="degree" id="degrees">...</h3>
+                    <h4 class="temperature-description">...</h4>
+                </div>
+            </div>
+            </div>
         </header>
 
         <!-- Sidebar Menu -->
@@ -27,50 +36,41 @@
         </label>
         <div id="sidebarMenu">
             <ul class="sidebarMenuInner">
-                <li><a href="#sec-1" class="pure-menu-link">Is there a fire?</a></li>
-                <li><a href="#sec-2" class="pure-menu-link">Fire weather</a></li>
-                <li><a href="#sec-3" class="pure-menu-link">Main Essentials</a></li>
-                <li><a href="#sec-4" class="pure-menu-link">You Prepared?</a></li>
-                <li><a href="#sec-5" class="pure-menu-link">House Prepared?</a></li>
-                <li><a href="#sec-6" class="pure-menu-link">Six P's</a></li>
-                <li><a href="#sec-7" class="pure-menu-link">Your FSC</a></li>
-                <li><a href="#sec-8" class="pure-menu-link">Useful Links</a></li>
+                <li><a href="#fire" class="pure-menu-link">Is there a fire?</a></li>
+                <li><a href="#main-essentials" class="pure-menu-link">Main Essentials</a></li>
+                <li><a href="#you-prepared" class="pure-menu-link">You Prepared?</a></li>
+                <li><a href="#house-prepared" class="pure-menu-link">House Prepared?</a></li>
+                <li><a href="#six-ps" class="pure-menu-link">Six P's</a></li>
+                <li><a href="#your-fsc" class="pure-menu-link">Your FSC</a></li>
+                <li><a href="#useful-links" class="pure-menu-link">Useful Links</a></li>
             </ul>
         </div>
 
 
         <!-- Main Content -->
-        <!-- Section 1-2: Incident Map -->
+        <!-- Section 1: Incident Map -->
         <div class="pure-g">
-            <div class="wrap-sec1 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                <input id="sec1" class="toggle" type="checkbox">
-                <label for="sec1" class="lbl-toggle">Is there a fire near you?</label>
-                <div class="sec1-content">
+            <div class="wrap-fire pure-u-1 pure-u-md-1-2 pure-u-lg-1-2" id="sec-2">
+                <input id="fire" class="toggle" type="checkbox">
+                <label for="fire" class="lbl-toggle">Is there a fire near you?</label>
+                <div class="fire-content">
                     <div class="content-inner">
-                        <div id="fireMap"></div> 
-                    </div>
-                </div>
-            </div>
-            <div class="wrap-sec2 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                <input id="sec2" class="toggle" type="checkbox">
-                <label for="sec2" class="lbl-toggle">What's the fire weather near you?</p>
-                </label>
-                <div class="sec2-content">
-                    <div class="content-inner">
-                        <p>
-                            Put map here
-                        </p>
+                        <div class="sec1-content">
+                            <div class="content-inner">
+                                <div id="fireMap"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Section 3: Essentials List -->
+        <!-- Section 2: Essentials List -->
         <div class="pure-g">
-            <div class="wrap-sec3 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                <input id="sec3" class="toggle" type="checkbox">
-                <label for="sec3" class="lbl-toggle">Do you have your emergency supply kit?</label>
-                <div class="sec3-content">
+            <div class="wrap-main-essentials pure-u-1" id="sec-3">
+                <input id="main-essentials" class="toggle" type="checkbox">
+                <label for="main-essentials" class="lbl-toggle">Do you have your emergency supply kit?</label>
+                <div class="main-essentials-content">
                     <div class="content-inner">
                         <div class="checkbox">
                             <ul>
@@ -119,12 +119,12 @@
             </div>
         </div>
 
-        <!-- Section 4: Are you prepared list -->
+        <!-- Section 3: Are you prepared list -->
         <div class="pure-g">
-            <div class="wrap-sec4 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                <input id="sec4" class="toggle" type="checkbox">
-                <label for="sec4" class="lbl-toggle">Are You Prepared?</label>
-                <div class="sec4-content">
+            <div class="wrap-you-prepared pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <input id="you-prepared" class="toggle" type="checkbox">
+                <label for="you-prepared" class="lbl-toggle">Are You Prepared?</label>
+                <div class="you-prepared-content">
                     <div class="content-inner">
                         <div class="checkbox2">
                             <ul>
@@ -159,112 +159,107 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
-            <!-- Section 5: Is your house prepared? -->
-            <div class="pure-g">
-                <div class="wrap-sec5 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                    <input id="sec5" class="toggle" type="checkbox">
-                    <label for="sec5" class="lbl-toggle">Is Your House Prepared?</label>
-                    <div class="sec5-content">
-                        <div class="content-inner">
-                            <div class="checkbox3">
-                                <ul>
-                                    <li><input type="checkbox" id="checkbox3_1">
-                                        <label for="checkbox3_1">Clean roofs and gutters of dead leaves, debris
-                                            and pine
-                                            needles that could catch embers</label>
-                                    </li>
-                                    <li><input type="checkbox" id="checkbox3_2">
-                                        <label for="checkbox3_2">
-                                            Replace or repair any loose or missing shingles or roof tiles to
-                                            prevent ember
-                                            penetration</label>
-                                    </li>
-                                    <li><input type="checkbox" id="checkbox3_3">
-                                        <label for="checkbox3_3">Reduce embers that could pass through vents in
-                                            the eaves by
-                                            installing 1/8 inch metal mesh screening</label>
-                                    </li>
-                                    <li><input type="checkbox" id="checkbox3_4">
-                                        <label for="checkbox3_4">Clean debris from exterior attic vents and
-                                            install 1/8 inch
-                                            metal mesh screening to reduce embers</label>
-                                    </li>
-                                    <li><input type="checkbox" id="checkbox3_5">
-                                        <label for="checkbox3_5">
-                                            Repair or replace damaged or loose window screens and any broken
-                                            windows</label>
-                                    </li>
-                                    <li><input type="checkbox" id="checkbox3_6">
-                                        <label for="checkbox3_6">
-                                            Screen or box-in areas below patios and decks with wire mesh to
-                                            prevent debris
-                                            and combustible materials from accumulating</label>
-                                    </li>
-                                    <li><input type="checkbox" id="checkbox3_7">
-                                        <label for="checkbox3_7">
-                                            Move any flammable material away from wall exteriors - mulch,
-                                            flammable plants,
-                                            leaves and needles, firewood piles - anything that can burn
-                                        </label>
-                                    </li>
-                                    <li><input type="checkbox" id="checkbox3_8">
-                                        <label for="checkbox3_8">
-                                            Remove anything stored underneath decks or porches</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section 6: The Six P's -->
-            <div class="pure-g">
-                <div class="wrap-sec6 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                    <input id="sec6" class="toggle" type="checkbox">
-                    <label for="sec6" class="lbl-toggle">Do You Know the Six P's?</label>
-                    <div class="sec6-content">
-                        <div class="content-inner">
+        <!-- Section 4: Is your house prepared? -->
+        <div class="pure-g">
+            <div class="wrap-house-prepared pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <input id="house-prepared" class="toggle" type="checkbox">
+                <label for="house-prepared" class="lbl-toggle">Is Your House Prepared?</label>
+                <div class="house-prepared-content">
+                    <div class="content-inner">
+                        <div class="checkbox3">
                             <ul>
-                                <li>People and Pets</li>
-                                <li>Papers, phone numbers, and important documents</li>
-                                <li>Prescriptions, vitamins, and eyeglasses</li>
-                                <li>Pictures and irreplaceable memorabilia</li>
-                                <li>Personal computer hard drive and disks</li>
-                                <li>“Plastic” (credit cards, ATM cards) and cash</li>
+                                <li><input type="checkbox" id="checkbox3_1">
+                                    <label for="checkbox3_1">Clean roofs and gutters of dead leaves, debris
+                                        and pine
+                                        needles that could catch embers</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_2">
+                                    <label for="checkbox3_2">
+                                        Replace or repair any loose or missing shingles or roof tiles to
+                                        prevent ember
+                                        penetration</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_3">
+                                    <label for="checkbox3_3">Reduce embers that could pass through vents in
+                                        the eaves by
+                                        installing 1/8 inch metal mesh screening</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_4">
+                                    <label for="checkbox3_4">Clean debris from exterior attic vents and
+                                        install 1/8 inch
+                                        metal mesh screening to reduce embers</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_5">
+                                    <label for="checkbox3_5">
+                                        Repair or replace damaged or loose window screens and any broken
+                                        windows</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_6">
+                                    <label for="checkbox3_6">
+                                        Screen or box-in areas below patios and decks with wire mesh to
+                                        prevent debris
+                                        and combustible materials from accumulating</label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_7">
+                                    <label for="checkbox3_7">
+                                        Move any flammable material away from wall exteriors - mulch,
+                                        flammable plants,
+                                        leaves and needles, firewood piles - anything that can burn
+                                    </label>
+                                </li>
+                                <li><input type="checkbox" id="checkbox3_8">
+                                    <label for="checkbox3_8">
+                                        Remove anything stored underneath decks or porches</label>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        </div>
 
-        <!-- Section 7-8: Links, Fire Safe Council -->
+        <!-- Section 5: The Six P's -->
         <div class="pure-g">
-            <div class="wrap-sec7 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                <input id="sec7" class="toggle" type="checkbox">
-                <label for="sec7" class="lbl-toggle">Find your Fire Safe Council</label>
-                <div class="sec7-content">
+            <div class="wrap-six-ps pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                <input id="six-ps" class="toggle" type="checkbox">
+                <label for="six-ps" class="lbl-toggle">Do You Know the Six P's?</label>
+                <div class="six-ps-content">
                     <div class="content-inner">
-                        <p>
-                            Put info here
-                        </p>
+                        <ul>
+                            <li>People and Pets</li>
+                            <li>Papers, phone numbers, and important documents</li>
+                            <li>Prescriptions, vitamins, and eyeglasses</li>
+                            <li>Pictures and irreplaceable memorabilia</li>
+                            <li>Personal computer hard drive and disks</li>
+                            <li>“Plastic” (credit cards, ATM cards) and cash</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         </div>
         </div>
+        </div>
 
+        <!-- Section 6-7: Links, Fire Safe Council -->
         <div class="pure-g">
-            <div class="wrap-sec8 pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                <input id="sec8" class="toggle" type="checkbox">
-                <label for="sec8" class="lbl-toggle">Helpful Links</label>
-                <div class="sec8-content">
+            <div class="wrap-your-fsc pure-u-1 pure-u-md-1-2 pure-u-lg-1-2" id="sec-7">
+                <input id="your-fsc" class="toggle" type="checkbox">
+                <label for="your-fsc" class="lbl-toggle">Find your Fire Safe Council</label>
+                <div class="your-fsc-content">
+                    <div class="content-inner">
+                        <p>
+                            Coming Soon...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-useful-links pure-u-1 pure-u-md-1-2 pure-u-lg-1-2" id="sec-8">
+                <input id="useful-links" class="toggle" type="checkbox">
+                <label for="useful-links" class="lbl-toggle">Helpful Links</label>
+                <div class="useful-links-content">
                     <div class="content-inner">
                         <p class="subtitle">Check out these useful sites.
                         <ul>
@@ -285,10 +280,11 @@
                                     target="blank">Hardening Your Home</a>
                             </li>
                         </ul>
-                        </p>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
     </section>
 
     <footer>
@@ -299,7 +295,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./Assets/Javascript/script.js"></script>
     <!-- Google Maps API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqcx1kUhjcn_O1QjgfLtn2_2tiBdiAehY&callback=initMap"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqcx1kUhjcn_O1QjgfLtn2_2tiBdiAehY&callback=initMap"></script>
 
 </body>
 
