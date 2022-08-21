@@ -36,6 +36,7 @@ header {
     position: sticky;
     top: 0;
     display: flex;
+    z-index: 1;
 }
 
 h2 {
@@ -90,6 +91,7 @@ html, body {
     opacity: 1;
     border-radius: 7px;
     font-size: 13px;
+    z-index: 1;
 }
 
 .sidebarMenuInner li{
