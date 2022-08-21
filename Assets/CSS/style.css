@@ -33,8 +33,10 @@ header {
     opacity: 1;
     padding: 20px 35px;
     border-bottom: solid black 3px;
+    position: sticky;
     top: 0;
     display: flex;
+    z-index: 1;
 }
 
 h2 {
@@ -89,6 +91,7 @@ html, body {
     opacity: 1;
     border-radius: 7px;
     font-size: 13px;
+    z-index: 1;
 }
 
 .sidebarMenuInner li{
