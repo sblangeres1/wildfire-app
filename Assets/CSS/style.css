@@ -589,7 +589,8 @@ textarea{
     color: white;
   }
   
-  .saveBtn {
+  #save {
+    justify-content: center;
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -597,7 +598,10 @@ textarea{
     color: white;
   }
   
-  .saveBtn i:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
+  #save:active {
+    border-left: 1px solid rgb(0, 0, 0);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #005c70;
+    color: rgb(0, 0, 0);
   }
