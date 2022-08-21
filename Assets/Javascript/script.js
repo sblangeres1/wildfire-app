@@ -1,6 +1,7 @@
 var city;
 var date = new Date();
 var year = date.getYear();
+var saveButton = document.querySelector('#save');
 
 function yearFormat(a){
     var yearNum = Number(a) - 1900;
@@ -88,5 +89,31 @@ function initMap(){
         }); 
     });
 }
+
+function save(){
+    var inputs = document.querySelectorAll('input[type="checkbox"]');
+    var arrayData =[];
+    inputs.forEach(function(input){
+        if(input.id.split("x")[0] == 'checkbo'){
+            arrayData.push({id: input.id, checked: input.checked})
+        }
+        
+    })
+    localStorage.setItem('inputs', JSON.stringify(arrayData));
+    console.log(arrayData);
+}
+
+function load(){
+    var inputs = JSON.parse(localStorage.getItem('inputs'));
+    inputs.forEach(function(input){
+        document.getElementById(input.id).checked = input.checked;
+    });
+}
+
+saveButton.addEventListener('click', function(){
+    save();
+})
+
+load();
  
 window.initMap = initMap;
