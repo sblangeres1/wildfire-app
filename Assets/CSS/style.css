@@ -212,13 +212,14 @@ main {
 padding: 0px 300px;
 }
 
-.wrap-fire,
-.wrap-main-essentials,
-.wrap-you-prepared,
-.wrap-house-prepared,
-.wrap-six-ps,
-.wrap-your-fsc,
-.wrap-useful-links {
+.wrap-sec1,
+.wrap-sec2,
+.wrap-sec3,
+.wrap-sec4,
+.wrap-sec5,
+.wrap-sec6,
+.wrap-sec7,
+.wrap-sec8 {
     margin-bottom: 1.2rem 0;
     border-bottom: var(--tertiary-color) solid 6px;
   }
@@ -307,7 +308,7 @@ padding: 0px 300px;
   }
 
 /* BACK TO ORIGINAL VERTICAL MENU */
-Add transition to containers so they can push in and out.
+/*Add transition to containers so they can push in and out.*/
 #layout, #menu, .menu-link {
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
