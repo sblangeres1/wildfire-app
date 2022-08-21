@@ -112,6 +112,7 @@ function load(){
 
 saveButton.addEventListener('click', function(){
     save();
+    console.log("saved");
 })
 
 load();
