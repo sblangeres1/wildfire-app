@@ -33,7 +33,6 @@ header {
     opacity: 1;
     padding: 20px 35px;
     border-bottom: solid black 3px;
-    position: sticky;
     top: 0;
     display: flex;
 }
