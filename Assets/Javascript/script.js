@@ -1,6 +1,6 @@
 var city;
 var date = new Date();
-var year = date.getYear();
+var year = date.getYear()-1;
 var saveButton = document.querySelector('#save');
 
 function yearFormat(a){
