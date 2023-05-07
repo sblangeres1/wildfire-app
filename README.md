@@ -9,7 +9,7 @@
 ## Deployed Page
 [Screenshot](./Assets/Images/deployed-page.png)
 
-[URL of Deployed Application](https://nverhulp.github.io/wildfire-app/)
+[URL of Deployed Application](https://sblangeres1.github.io/wildfire-app/)
 
 
 ## Description
